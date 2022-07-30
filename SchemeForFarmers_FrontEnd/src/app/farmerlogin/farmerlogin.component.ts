@@ -16,7 +16,7 @@ export class FarmerloginComponent {
 
   constructor(private farmerloginService: FarmerLoginService, private router: Router) { }
   Submitdata() {
-    alert(JSON.stringify(this.login));
+    //alert(JSON.stringify(this.login));
     this.farmerloginService.login(this.login).subscribe(data => {
       //alert(JSON.stringify(data));
       // if(data.status == 'SUCCESS') {

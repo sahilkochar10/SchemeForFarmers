@@ -21,7 +21,7 @@ export class BidderloginComponent implements OnInit {
   Submitdata()
   {
     //console.log("Hi")
-    alert(JSON.stringify(this.login));
+    //alert(JSON.stringify(this.login));
     this.loginService.login(this.login).subscribe(data => {
       //alert(JSON.stringify(data));
       if(data != null) {
