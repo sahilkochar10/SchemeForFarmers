@@ -1,0 +1,93 @@
+<div>
+    <h1 style="margin-left: 400px;">FarmerDetails</h1>
+</div>
+<span>
+
+</span>
+<!-- <div class="page-content page-container" id="page-content">
+
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-lg-8 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;">Farmer</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Farmer Id</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Email</th>
+                                        <th>Contact</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Deepak</td>
+                                        <td>S</td>
+                                        <td>deepak@hotmail.com</td>
+                                        <td>9123456780</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Divya</td>
+                                        <td>S</td>
+                                        <td>divya@gmail.com</td>
+                                        <td>9012345123</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Poojah</td>
+                                        <td>G</td>
+                                        <td>poojaj@hotmail.com</td>
+                                        <td>9098765432</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Kalki</td>
+                                        <td>Vikas Reddy</td>
+                                        <td>kvreddy@hotmail.com</td>
+                                        <td>9678967890</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Vaishavi</td>
+                                        <td>V</td>
+                                        <td>vaishavi@hotmail.com</td>
+                                        <td>9123412345</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div >
+    <table class="main">
+            <thead >
+            <tr>
+                <th>Farmer ID</th>
+                <th>Farmer First Name</th>
+                <th>Farmer Last Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let f of farmers">
+                    <td>{{f.farmerId}}</td>
+                    <td>{{f.farmerFirstName}}</td>
+                    <td>{{f.farmerLastName}}</td>
+                    <td>{{f.email}}</td>
+                    <td>{{f.contactNo}}</td>
+                </tr>
+            </tbody>
+    </table>
+</div>

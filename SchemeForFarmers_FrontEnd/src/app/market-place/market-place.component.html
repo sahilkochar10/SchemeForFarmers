@@ -1,0 +1,101 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<div>
+    <h1 style="margin-left: 480px;">MarketPlace</h1>
+</div>
+<br>
+<!-- <div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-lg-8 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;">Market</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Crop Id</th>
+                                        <th>Crop Name</th>
+                                        <th>Quantity</th>
+                                        <th>Bidder Name</th>
+                                        <th>Current Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Rice</td>
+                                        <td>5</td>
+                                        <td>XYZ</td>
+                                        <td>260</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Wheat</td>
+                                        <td>10</td>
+                                        <td>ABC</td>
+                                        <td>600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Sorgham</td>
+                                        <td>3</td>
+                                        <td>MNO</td>
+                                        <td>210</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Cotton</td>
+                                        <td>5</td>
+                                        <td>ABC</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Mango</td>
+                                        <td>10</td>
+                                        <td>PQR</td>
+                                        <td>300</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div >
+    <table class="main">
+            <thead >
+            <tr>
+                <th>Crop Id</th>
+                <th>Crop Name</th>
+                <th>Farmer Name</th>
+                <th>Crop Type</th>
+                <th>Fertilizer Type</th>
+                <th>Quantity</th>
+                <th>Bidder Name</th>
+                <th>Current bidding amount </th>
+                <th>Approved Status</th>
+            </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let c of crops">
+
+                    <td>{{c.cropid}}</td>
+                    <td>{{c.cropName}}</td>
+                    <td>{{c.farmer?.farmerFirstName}}</td>
+                    <td>{{c.croptype}}</td>
+                    <td>{{c.fertilizertype}}</td>
+                    <td>{{c.quantity}}</td>
+                    <td>{{c.bidder?.bidderFirstName}}</td>
+                    <td>{{c.baseprice}}</td>
+                    <td>{{c.status}}</td>
+                </tr>
+            </tbody>
+    </table>
+</div>

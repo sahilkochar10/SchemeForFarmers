@@ -1,0 +1,18 @@
+th{
+    background-color: chartreuse;
+    border: 2px solid #A3CB38;
+}
+tr:nth-child(even) 
+{
+    background-color: #C4E538;
+}
+td{
+    border: 2px solid black;
+}
+table{
+    margin-left: 200px ;
+    align-items: center;
+    border: 2px solid gray;
+    box-shadow: 2px solid greenyellow;
+    
+}

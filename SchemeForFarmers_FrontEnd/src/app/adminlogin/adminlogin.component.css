@@ -1,0 +1,36 @@
+body{
+    /*background-image: url("src\assets\farmerhome.jpg");*/
+    background-image:url("src/assets/loginbg.jpg") ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 50em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.main{
+    height:45em; 
+    
+
+}
+.login-box{
+   /* background-image:url("src/assets/adminbackground.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+    background-color: rgb(214, 240, 181);
+    width:400px;
+    height:550px;
+    
+    color:rgb(15, 14, 14);
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding:70px 30px;
+    padding-top: 2em;
+    }
+
+
+
+

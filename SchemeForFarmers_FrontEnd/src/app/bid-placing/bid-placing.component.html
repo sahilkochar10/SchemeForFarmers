@@ -1,0 +1,350 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<br>
+<!-- <div class="row">
+    <div class="column">
+      <div class="card">
+          <h3>Crop Name:</h3><h4>Rice</h4>
+          <h3>Fertilizer Used:</h3><h4>ABC</h4>
+          <h3>Quantity:</h3><h4>5kg</h4>
+          <h3>Base Price:</h3><h4>250</h4>
+          <h3>Current Price:</h3><h4>260</h4>
+          <a href="#" class="button glow-button"><h3>Bid</h3></a>
+        </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <h3>Crop Name:</h3><h4>Wheat</h4>
+        <h3>Fertilizer Used:</h3><h4>CDE</h4>
+        <h3>Quantity:</h3><h4>10kg</h4>
+        <h3>Base Price:</h3><h4>500</h4>
+        <h3>Current Price:</h3><h4>600</h4>
+        <a href="#" class="button glow-button"><h3>Bid</h3></a>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <h3>Crop Name:</h3><h4>Sorgham</h4>
+        <h3>Fertilizer Used:</h3><h4>EFG</h4>
+        <h3>Quantity:</h3><h4>5kg</h4>
+        <h3>Base Price:</h3><h4>200</h4>
+        <h3>Current Price:</h3><h4>230</h4>
+        <a href="#" class="button glow-button"><h3>Bid</h3></a>
+      </div>
+    </div>
+</div> -->
+<!-- <br>
+<div class="row">
+    <div class="column">
+      <div class="card">
+        <h3>Crop Name:</h3><h3>Cotton</h3>
+        <h3>Fertilizer Used:</h3><h3>MNC</h3>
+        <h3>Quantity:</h3><h3>6kg</h3>
+        <h3>Base Price:</h3><h3>350</h3>
+        <h3>Current Price:</h3><h3>360</h3>
+        <a href="#" class="button glow-button"><h3>Bid</h3></a>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <h3>Crop Name:</h3><h3>Barley</h3>
+        <h3>Fertilizer Used:</h3><h3>LOP</h3>
+        <h3>Quantity:</h3><h3>3kg</h3>
+        <h3>Base Price:</h3><h3>280</h3>
+        <h3>Current Price:</h3><h3>290</h3>
+        <a href="#" class="button glow-button"><h3>Bid</h3></a>
+      </div>
+    </div>
+</div>
+   -->
+<!-- <div >
+  <table class="main">
+            <thead >
+            <tr>
+                <th>Crop Id</th>
+                <th>Crop Type</th>
+                <th>Farmer id</th>
+                <th>Farmer Name</th>
+                <th>Crop Name</th>
+                <th>Fertilizer Type</th>
+                <th>Quantity</th>
+                <th>Current bidding amount </th>
+
+            </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let c of crops">
+
+                    <td>{{c.cropid}}</td>
+                    <td>{{c.croptype}}</td>
+                    <td>{{c.farmer.farmerId}}</td>
+                    <td>{{c.farmer.farmerFirstName}}</td>
+                    <td>{{c.cropName}}</td>
+                    <td>{{c.fertilizertype}}</td>
+                    <td>{{c.quantity}}</td>
+                    <td>{{c.baseprice}}</td>
+                    
+                </tr>
+            </tbody>
+    </table>
+</div>
+<br>
+<button class = "bid" (click)="bid()">
+  Bid
+</button>
+<br>
+<br>
+<div *ngIf="div1" >
+  <form (ngSubmit) = "placeBid">
+    <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
+      <img src="assets/farmer.jpg" width="135" height="135" style="display: block; margin-left: auto; margin-right: auto;">
+      <h1 style="margin-left: 10px;">Sell Crop Details</h1>
+      <label for = "t1">Crop Id:  </label>
+      <input
+            type = "number"
+            name = "t1"
+            [(ngModel)] = crop.cropId
+            required
+            #cid = "ngModel"
+      /><br>
+      <div
+        *ngIf = "cid.invalid && (cid.dirty || cid.touched)"
+        class = "alert">
+  
+        <div *ngIf="cid.errors?.required">
+            Crop Id is Required!
+        </div>
+      </div>
+      <label for = "t2"> Farmer Id:  </label>
+      <input
+            type = "number"
+            name = "t1"
+            [(ngModel)] = crop.cropId
+            required
+            #cid = "ngModel"
+      /><br>
+      <div
+        *ngIf = "cid.invalid && (cid.dirty || cid.touched)"
+        class = "alert">
+  
+        <div *ngIf="cid.errors?.required">
+            Crop Id is Required!
+        </div>
+      ></div>
+  </form>
+</div> -->
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<br>
+<!-- <div class="row">
+  <div class="column">
+    <div class="card">
+        <h3>Crop Name:</h3><h4>Rice</h4>
+        <h3>Fertilizer Used:</h3><h4>ABC</h4>
+        <h3>Quantity:</h3><h4>5kg</h4>
+        <h3>Base Price:</h3><h4>250</h4>
+        <h3>Current Price:</h3><h4>260</h4>
+        <a href="#" class="button glow-button"><h3>Bid</h3></a>
+      </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <h3>Crop Name:</h3><h4>Wheat</h4>
+      <h3>Fertilizer Used:</h3><h4>CDE</h4>
+      <h3>Quantity:</h3><h4>10kg</h4>
+      <h3>Base Price:</h3><h4>500</h4>
+      <h3>Current Price:</h3><h4>600</h4>
+      <a href="#" class="button glow-button"><h3>Bid</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <h3>Crop Name:</h3><h4>Sorgham</h4>
+      <h3>Fertilizer Used:</h3><h4>EFG</h4>
+      <h3>Quantity:</h3><h4>5kg</h4>
+      <h3>Base Price:</h3><h4>200</h4>
+      <h3>Current Price:</h3><h4>230</h4>
+      <a href="#" class="button glow-button"><h3>Bid</h3></a>
+    </div>
+  </div>
+</div> -->
+<!-- <br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <h3>Crop Name:</h3><h3>Cotton</h3>
+      <h3>Fertilizer Used:</h3><h3>MNC</h3>
+      <h3>Quantity:</h3><h3>6kg</h3>
+      <h3>Base Price:</h3><h3>350</h3>
+      <h3>Current Price:</h3><h3>360</h3>
+      <a href="#" class="button glow-button"><h3>Bid</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <h3>Crop Name:</h3><h3>Barley</h3>
+      <h3>Fertilizer Used:</h3><h3>LOP</h3>
+      <h3>Quantity:</h3><h3>3kg</h3>
+      <h3>Base Price:</h3><h3>280</h3>
+      <h3>Current Price:</h3><h3>290</h3>
+      <a href="#" class="button glow-button"><h3>Bid</h3></a>
+    </div>
+  </div>
+</div>
+ -->
+<div >
+<table class="main">
+          <thead >
+          <tr>
+              <th>Crop Id</th>
+              <th>Farmer id</th>
+              <th>Farmer Name</th>
+              <th>Crop Type</th>
+              <th>Crop Name</th>
+              <th>Fertilizer Type</th>
+              <th>Quantity</th>
+              <th>Current bidding amount </th>
+              <th>Bidding Status</th>
+          </tr>
+          </thead>
+          <tbody >
+              <tr *ngFor="let c of crops">
+
+                  <td>{{c.cropid}}</td>
+                  <td>{{c.farmer?.farmerId}}</td>
+                  <td>{{c.farmer?.farmerFirstName}}</td>
+                  <td>{{c.croptype}}</td>
+                  <td>{{c.cropName}}</td>
+                  <td>{{c.fertilizertype}}</td>
+                  <td>{{c.quantity}}</td>
+                  <td>{{c.baseprice}}</td>
+                  <td>{{c.status}}</td>
+              </tr>
+          </tbody>
+  </table>
+</div>
+<br>
+<button class = "bid" (click)="bid()">
+Bid
+</button>
+<br>
+<br>
+<div *ngIf="div1" >
+<form (ngSubmit)="placeBid()">
+  <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
+    <h1 style="margin-left: 10px;">Place Bid</h1>
+    <label for="t1"> Crop Id:</label>
+    <input  
+            type = "Number" 
+            name = "t1" 
+            [(ngModel)] = crop.cropId 
+            required
+            #id = "ngModel"          
+    /><br><br>
+    <div 
+            *ngIf = "id.invalid && (id.dirty || id.touched)"
+            class = "alert">
+        <div *ngIf="id.errors?.required">
+              Crop id is Required!
+        </div>
+    </div>
+    <label for="t2"> Farmer Id:</label>
+    <input  
+            type = "Number" 
+            name = "t2" 
+            [(ngModel)] = crop.farmerId
+            required
+            #fid = "ngModel"          
+    /><br><br>
+    <div 
+            *ngIf = "fid.invalid && (fid.dirty || fid.touched)"
+            class = "alert">
+        <div *ngIf="fid.errors?.required">
+              Farmer id is Required!
+        </div>
+    </div>
+    <label for="t3"> Crop Type:</label>
+    <select [(ngModel)]= crop.cropType name = "t3">
+
+      <option value="Kharif">KHARIF</option>
+      <option value="Rabi">RABI</option>    
+      <option value="Horiculture">HORICULTURE</option>                                             
+  </select>
+  <br><br>
+  <label for="t5"> CropName</label>
+    <input  
+            type = "text" 
+            name = "t5" 
+            [(ngModel)] = crop.cropName 
+            required
+            minlength="3"
+            #cname = "ngModel"          
+    /><br><br>
+    <div 
+            *ngIf = "cname.invalid && (cname.dirty || cname.touched)"
+            class = "alert">
+        
+        <div *ngIf="cname.errors?.required">
+              Crop Name is Required!
+        </div>
+
+    </div>
+  <label for="t6"> Fertilizer:</label>
+    <input  
+            type = "text" 
+            name = "t6" 
+            [(ngModel)] = crop.fertilizertype 
+            required
+            minlength="3"
+            #ftype = "ngModel"          
+    /><br><br>
+    <div 
+            *ngIf = "ftype.invalid && (ftype.dirty || ftype.touched)"
+            class = "alert">
+        
+        <div *ngIf="ftype.errors?.required">
+              Fertilizer Type is Required!
+        </div>
+
+    </div>
+
+    <label for="t7"> Quantity:</label>
+    <input  
+            type = "number" 
+            name = "t7" 
+            [(ngModel)] = crop.quantity 
+            required
+            #quan = "ngModel"          
+    /><br><br>
+    <div 
+            *ngIf = "quan.invalid && (quan.dirty || quan.touched)"
+            class = "alert">
+        
+        <div *ngIf="ftype.errors?.required">
+              Quantity is Required!
+        </div>
+
+    </div>
+
+    <label for="t8"> Bid Price:</label>
+    <input  
+            type = "number" 
+            name = "t8" 
+            [(ngModel)] = crop.baseprice
+            required
+            #bp = "ngModel"          
+    /><br><br>
+    <div 
+            *ngIf = "bp.invalid && (bp.dirty || bp.touched)"
+            class = "alert">
+        
+        <div *ngIf="bp.errors?.required">
+              Enter the Bid amount!
+        </div>
+    </div>
+    <button class = "submit"
+            type="submit" > Submit
+    </button>
+</div>

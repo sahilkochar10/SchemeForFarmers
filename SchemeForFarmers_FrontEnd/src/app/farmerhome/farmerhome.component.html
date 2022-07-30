@@ -1,0 +1,27 @@
+<body>
+    <div class="header">
+        <img src="assets/websitelogo.jpg" width="70px" height="70px" style="float: left;">&nbsp;<h2 style="margin-left: 100px;">Farmer</h2>
+    </div>
+    <div class = "sideNav">
+        <ul>
+            <li><h3><img src="assets/hammer (2).png" width="35px" height="35px" alt="">&nbsp;
+                <a [routerLink] = "['/farmerHome/sellCrop']">Sell Crop</a></h3></li>
+            <li><h3><img src="assets/history.png" width="40px" height="35px" alt="">&nbsp;
+                <a [routerLink] = "['/farmerHome/soldHistory']">Sold History</a></h3></li>
+            <li><h3><img src="assets/marketplace.png" width="30px" height="30px" alt="">&nbsp; 
+                <a [routerLink] = "['/farmerHome/marketplace']">MarketPlace</a></h3></li>
+                <li><h3><img src="assets/marketplace.png" width="30px" height="30px" alt="">&nbsp; 
+                    <a [routerLink] = "['/farmerHome/insuranceDashboard']">Insurance</a></h3></li>
+            <li><h3><img src="assets/wallet.png" width="30px" height="30px">&nbsp;
+                <a href="javascript:void(0)" (click)="bal()">Wallet</a></h3></li>
+                <!-- <div *ngIf = "div1">
+                    {{}}
+                </div> -->
+            <li><h3><img src="assets/logout.jpg" width="30px" height="30px">&nbsp;
+                <a [routerLink] = "['/Home']">Log out</a></h3></li> 
+       </ul>
+    </div>
+    <div class="main">
+        <router-outlet></router-outlet>
+    </div>
+    </body>

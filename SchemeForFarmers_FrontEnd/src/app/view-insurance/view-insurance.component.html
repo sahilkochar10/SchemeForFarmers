@@ -1,0 +1,31 @@
+<body>
+    
+
+<div>
+    <table class="main">
+            <thead>
+                <tr>
+                    <th>Insurance ID</th>
+                    <th>Insuree Name</th>
+                    <th>Crop Name</th>
+                    <th>Crop Type</th>
+                    <th>Sum insured</th>
+                    <th>Estimated amount</th>
+                    <th>Insurance Approved Status</th>
+                </tr>
+            </thead>
+
+            <tbody >
+                <tr *ngFor = "let i of insurance"> 
+                    <td>{{i.insuranceId}}</td>
+                    <td>{{i.insureeName}}</td>
+                    <td>{{i.cropName}}</td>
+                    <td>{{i.croptype}}</td>
+                    <td>{{i.sumInsured}}</td>
+                    <td>{{i.estimatedamount}}</td>
+                    <td>{{i.approvedstatus}}</td>
+                </tr>
+            </tbody>
+    </table>
+</div>
+</body>

@@ -1,0 +1,437 @@
+<!-- <body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+          <img src="assets/websitelogo.jpg" width="70px" height="70px" style="float: left;">
+          <a href="#home" class="w3-bar-item w3-button w3-wide"><b>SEED THE RISE</b></a>
+          </div>
+          </div>
+
+    <div class="main">
+    <form [formGroup]="FarmerRegistrationForm" (ngSubmit)="Submitdata()" novalidate>
+    <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
+        <img src="assets/images.jpg" width="135" height="135" style="display: block; margin-left: auto; margin-right: auto;">
+        <h1 style="margin-left: 10px;">Farmer Registration</h1>
+
+            <div class="row">
+                <div class="row mb-3">
+                        <label><b>First Name</b></label>
+                        <input class="form-control" type="text" id="firstName" formControlName="firstName" placeholder="Enter First Name">
+                        <div *ngIf="!FarmerRegistrationForm.get('firstName')?.valid && FarmerRegistrationForm.get('firstName')?.touched" 
+                        class="alert alert-danger"> First Name is required</div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="row mb-3">
+                        <label><b>Last Name</b></label>
+                        <input class="form-control" type="text" id="lasttName" formControlName="lastName" placeholder="Enter Last Name">
+                    <div *ngIf="!FarmerRegistrationForm.get('lastName')?.valid && FarmerRegistrationForm.get('lastName')?.touched" 
+                    class="alert alert-danger"> Last Name is required</div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="row mb-3">
+                        <label><b>Email</b></label>
+                        <input class="form-control" type="text" id="email" formControlName="email" placeholder="Enter Email ID">
+                        <div *ngIf="!FarmerRegistrationForm.get('email')?.valid && FarmerRegistrationForm.get('email')?.touched" 
+                        class="alert alert-danger"> Email is required</div>
+                </div>
+                <div *ngIf="email!.errors?.pattern" class="col-8 error">
+                
+                    Enter correct email
+                     
+                 </div>
+            </div>
+            
+            <div class="row">
+                <div class="row mb-3">
+                    <label><b>Password</b></label>
+                        <input class="form-control" type="password" id="password" formControlName="password" placeholder="Enter Password" appPassword>
+                        <div *ngIf="!password?.valid && (password?.dirty || password?.touched)" class="form-group error col-8">
+                            <div *ngIf="password!.errors!.required">
+                              Password is required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            <div class="row">
+                <div class="row mb-3">
+                    <label><b>Confirm Password</b></label>
+                        <input class="form-control" type="password" id="confirmPassword" formControlName="confirmPassword" placeholder="Re-enter Password">
+                        <div *ngIf="!password?.valid && (password?.dirty || password?.touched)" class="form-group error col-8">
+                            <div *ngIf="password!.errors!.required">
+                              Password is required
+                            </div>
+                            <div  *ngIf="(FarmerRegistrationForm.get('password')?.value !== FarmerRegistrationForm.get('confirmPassword')?.value)">
+                                Password does not match
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            <div class="row">
+                <div class="row mb-3">
+                    <label><b>Address</b></label>
+                        <textarea class="form-control" rows="3" cols="40" type="text" id="address" formControlName="address" placeholder="Enter door number and street name"></textarea>
+                        <div *ngIf="!FarmerRegistrationForm.get('address')?.valid && FarmerRegistrationForm.get('address')?.touched" 
+                        class="alert alert-danger"> Address is required</div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="row mb-3">
+                    <label><b>City</b></label>
+                        <input class="form-control" type="text" id="city" formControlName="city" placeholder="Enter your City">
+                        <div *ngIf="!FarmerRegistrationForm.get('city')?.valid && FarmerRegistrationForm.get('city')?.touched" 
+                        class="alert alert-danger"> City is required</div>
+                </div>
+            </div>
+    
+            <div class="col-10">
+                <label for="State"><b>State</b></label>
+                    <select class="form-select" id="state" placeholder="Select your State"  formControlName="state"> 
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
+                    <div *ngIf="!FarmerRegistrationForm.get('state')?.valid && FarmerRegistrationForm.get('state')?.touched" 
+                        class="alert alert-danger"> State is required</div>
+            </div>
+    
+            <div class="row">
+                <div class="row mb-3">
+                    <label><b>Pincode</b></label>
+                        <input class="form-control" type="text" id="pincode" formControlName="pincode" placeholder="Enter your Pincode">
+                        <div *ngIf="!FarmerRegistrationForm.get('pincode')?.valid && FarmerRegistrationForm.get('pincode')?.touched" 
+                        class="alert alert-danger"> Pincode is required</div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="row mb-3">
+                    <label><b>Land Area</b></label>
+                        <input class="form-control" type="text" id="landArea" formControlName="landArea" placeholder="Enter Land Area">
+                        <div *ngIf="!FarmerRegistrationForm.get('landArea')?.valid && FarmerRegistrationForm.get('landArea')?.touched" 
+                        class="alert alert-danger"> Land Area is required</div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="row mb-3">
+                    <label><b>Land Location</b></label>
+                        <input class="form-control" type="text" id="landLocation" formControlName="landLocation" placeholder="Enter Land Location">
+                        <div *ngIf="!FarmerRegistrationForm.get('landLocation')?.valid && FarmerRegistrationForm.get('landLocation')?.touched" 
+                        class="alert alert-danger"> Land Location is required</div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="row mb-3">
+                    <label><b>Aadhar Card Number</b></label>
+                        <input class="form-control" type="text" id="aadharCard" formControlName="aadharCard" placeholder="Enter your Aadhar number">
+                        <div *ngIf="!FarmerRegistrationForm.get('aadharCard')?.valid && FarmerRegistrationForm.get('aadharCard')?.touched" 
+                        class="alert alert-danger"> Aadhar Card Number is required</div>
+                </div>
+            </div>
+
+        <div class="form-group form-check">
+            <button type="submit" class="btn btn-light btn-lg" style=" border-radius: 10%; 
+            margin-top: 10px; color: rgb(255, 254, 254); background-color: rgb(231, 19, 19);" 
+            [disabled]="!FarmerRegistrationForm.valid">Register</button><br><br>
+        </div>
+        
+    </div>
+    
+    </form>
+    </div>
+</body> -->
+
+
+
+
+
+
+<!-- 
+ <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <img src="assets/websitelogo.jpg" width="70px" height="70px" style="float: left;">
+      <a href="#home" class="w3-bar-item w3-button w3-wide"><b>SEED THE RISE</b></a>
+      </div>
+      </div>
+      <div class="main">
+        <form (ngSubmit)="Submitdata()">
+            <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
+                <img src="assets/images.jpg" width="135" height="135" style="display: block; margin-left: auto; margin-right: auto;">
+                <h1 style="margin-left: 10px;">Farmer Registration</h1>
+
+                <label for="t1"> Enter Your First Name:</label>
+      <input  
+              type = "text" 
+              name = "t1" 
+              [(ngModel)] = bidder.firstName 
+              required
+              minlength="3"
+              #name = "ngModel"          
+      /><br><br>
+      <div 
+              *ngIf = "name.invalid && (name.dirty || name.touched)"
+              class = "alert">
+          
+          <div *ngIf="name.errors?.required">
+                Name is Required!!!
+          </div>
+          
+          <div *ngIf = "name.errors?.minlength">
+                Name must be atleast 3 characters
+          </div>
+
+      </div>
+</div> -->
+<body>
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <img src="assets/websitelogo.jpg" width="70px" height="70px" style="float: left;">
+      <a href="#home" class="w3-bar-item w3-button w3-wide"><b>SEED THE RISE</b></a>
+    </div>
+</div>
+
+<div class="main" style="margin-top: 150px;">
+
+<form (ngSubmit)="register()">
+    <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
+        <img src="assets/farmer.jpg" width="135" height="135" style="display: block; margin-left: auto; margin-right: auto;">
+        <h1 style="margin-left: 10px;">Farmer Registration</h1>
+
+        <label for="t1"> First Name:</label>
+      <input  
+              type = "text" 
+              name = "t1" 
+              [(ngModel)] = farmer.farmerFirstName 
+              required
+              minlength="3"
+              #fname = "ngModel"          
+      /><br><br>
+      <div 
+              *ngIf = "fname.invalid && (fname.dirty || fname.touched)"
+              class = "alert">
+          
+          <div *ngIf="fname.errors?.required">
+                First Name is Required!
+          </div>
+          
+          <div *ngIf = "fname.errors?.minlength">
+                First Name must be atleast 3 characters long
+          </div>
+
+      </div>
+
+      <label for="t2"> Last Name:</label>
+      <input  
+              type = "text" 
+              name = "t2" 
+              [(ngModel)] = farmer.farmerLastName 
+              required
+              minlength="1"
+              #lname = "ngModel"          
+      /><br><br>
+      <div 
+              *ngIf = "lname.invalid && (lname.dirty || lname.touched)"
+              class = "alert">
+          
+          <div *ngIf="lname.errors?.required">
+                Last Name is Required!
+          </div>
+          
+          <div *ngIf = "lname.errors?.minlength">
+                Last Name must be atleast 1 character long
+          </div>
+
+      </div>
+
+
+      <label for="t3">Email ID:</label>
+      <input 
+              type ="email" 
+              name = "t3" 
+              [(ngModel)]=farmer.email 
+              required    
+              email
+              #email="ngModel"    
+      /><br><br>
+      <div 
+            *ngIf = "email.invalid && (email.dirty || email.touched)"
+            class = "alert">
+            <div *ngIf="email.errors?.required">
+                  Email is Required!
+            </div>
+            <div *ngIf="email.errors?.email">
+                  Email is Wrong format! Right format : xyx@gmail.com
+            </div>
+      </div>
+
+      <label for="t4">Password:</label>
+      <input 
+              type ="password" 
+              name = "t4" 
+              [(ngModel)]=farmer.password 
+              required
+              minlength="6"
+              #pass="ngModel"
+       /><br><br>
+       <div 
+            *ngIf = "pass.invalid && (pass.dirty || pass.touched)"
+            class = "alert">
+   
+            <div *ngIf="pass.errors?.required">
+                        Enter you password!
+            </div>
+   
+            <div *ngIf = "pass.errors?.minlength">
+                        Password must be atleast 6 characters
+            </div>
+        </div>      
+
+        <label for="t5">Confirm Password:</label>
+      <input 
+              type ="password" 
+              name = "t5" 
+              [(ngModel)]=farmer.password 
+              required
+              minlength="6"
+              #cpass="ngModel"
+       /><br><br>
+       <div 
+            *ngIf = "cpass.invalid && (cpass.dirty || cpass.touched)"
+            class = "alert">
+   
+            <div *ngIf="cpass.errors?.required">
+                        Enter you password!
+            </div>
+   
+            <div *ngIf = "cpass.errors?.minlength">
+                        password must be atleast 6 characters
+            </div>
+        </div> 
+
+        <label for="t6">Contact Number:</label>
+      <input 
+              type ="number" 
+              name = "t6" 
+              [(ngModel)]=farmer.contactNo
+              required
+              minlength="10"
+              #cno="ngModel"
+       /><br><br>
+       <div 
+            *ngIf = "cno.invalid && (cno.dirty || cno.touched)"
+            class = "alert">
+   
+            <div *ngIf="cno.errors?.required">
+                        Enter your number!
+            </div>
+   
+            <div *ngIf = "cno.errors?.minlength">
+                        Number must be atleast 10 characters
+            </div>
+        </div> 
+
+        <label for="t7">Aadhar Number:</label>
+      <input 
+              type ="number" 
+              name = "t7" 
+              [(ngModel)]=farmer.aadharNo
+              required
+              length="12"
+              #ano="ngModel"
+       /><br><br>
+       <div 
+            *ngIf = "ano.invalid && (ano.dirty || ano.touched)"
+            class = "alert">
+   
+            <div *ngIf="ano.errors?.required">
+                        Enter your Aadhar number!
+            </div>
+   
+            <div *ngIf = "ano.errors?.length">
+                        Aadhar Number must be 12 characters
+            </div>
+        </div> 
+        <div>
+        <label for="t8">Land Area:</label>
+      <input 
+              type ="text" 
+              name = "t8" 
+              [(ngModel)]=farmer.landDetails
+              required
+              minlength="2"
+              #la="ngModel"
+       /><br><br>
+       <div *ngIf = "la.invalid && (la.dirty || ano.touched)"
+            class = "alert">
+   
+            <div *ngIf="la.errors?.required">
+                        Enter your Aadhar number!
+            </div>     
+        </div>
+    </div>
+        <label for="t9">Balance:</label>
+      <input 
+              type ="number" 
+              name = "t9" 
+              [(ngModel)]=farmer.balance
+              required
+              minlength="4"
+              #bal="ngModel"
+       /><br><br>
+       <div 
+            *ngIf = "bal.invalid && (bal.dirty || bal.touched)"
+            class = "alert">
+   
+            <div *ngIf="bal.errors?.required">
+                        Enter your Balance!
+            </div>
+   
+            <div *ngIf = "bal.errors?.length">
+                        Balance must be above 1000 Rs. 
+            </div>
+        </div> 
+
+      <button 
+              type="submit"> Register
+      </button>
+    </div>

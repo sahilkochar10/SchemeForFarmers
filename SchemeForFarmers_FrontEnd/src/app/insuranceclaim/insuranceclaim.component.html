@@ -1,0 +1,183 @@
+<div>
+    <h1 style="margin-left: 400px; font-family: 'Times New Roman', Times, serif;">Insurance Claim</h1>
+</div>
+<span>
+
+</span>
+<div>
+    <table class="main">
+            <thead>
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Insuree Id</th>
+                    <th>Farmer ID</th>
+                    <th>Insuree Name</th>
+                    <th>Cause of Loss</th>
+                    <th>Date of Loss</th>
+                    <th>Amount</th>
+                    <th>Claim approval</th>
+                </tr>
+            </thead>
+
+            <tbody >
+                <tr *ngFor = "let i of claims"> 
+                    <td>{{i.claimId}}</td>
+                    <td>{{i.insurance.insuranceId}}</td>
+                    <td>{{i.farmer.farmerId}}</td>
+                    <td>{{i.insureeName}}</td>
+                    <td>{{i.causeofloss}}</td>
+                    <td>{{i.dateofloss}}</td>
+                    <td>{{i.amount}}</td>
+                    <td>{{i.claimapproval}}</td>
+                </tr>
+            </tbody>
+    </table>
+</div>
+<br>
+<button class = "approve" (click)="approve()">
+  Approve Insurance Claim
+</button>
+<br>
+<br>
+<div *ngIf="div1" >
+  <form (ngSubmit)="approveclaim()">
+    <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
+      <h1 style="margin-left: 10px;">Update Status</h1>
+      <label for="t1"> Claim Id:</label>
+      <input  
+              type = "Number" 
+              name = "t1" 
+              [(ngModel)] = claim.claimId 
+              required
+              #id = "ngModel"          
+      /><br><br>
+      <div 
+              *ngIf = "id.invalid && (id.dirty || id.touched)"
+              class = "alert">
+          <div *ngIf="id.errors?.required">
+                Claim id is Required!
+          </div>
+      </div>
+      <label for="t2"> Insuree Id:</label>
+      <input  
+              type = "Number" 
+              name = "t2" 
+              [(ngModel)] = claim.insureeId
+              required
+              #fid = "ngModel"          
+      /><br><br>
+      <div 
+              *ngIf = "fid.invalid && (fid.dirty || fid.touched)"
+              class = "alert">
+          <div *ngIf="fid.errors?.required">
+                Insuree id is Required!
+          </div>
+      </div>
+      <label for="t3"> Farmer Id:</label>
+      <input  
+              type = "Number" 
+              name = "t3" 
+              [(ngModel)] = claim.farmerId
+              required
+              #bid = "ngModel"          
+      /><br><br>
+      <div 
+              *ngIf = "bid.invalid && (bid.dirty || bid.touched)"
+              class = "alert">
+          <div *ngIf="bid.errors?.required">
+                Farmer id is Required!
+          </div>
+      </div>
+    <br><br>
+    <label for="t4"> Insuree Name </label>
+      <input  
+              type = "text" 
+              name = "t4" 
+              [(ngModel)] = claim.insureeName 
+              required
+              minlength="3"
+              #cname = "ngModel"          
+      /><br><br>
+      <div 
+              *ngIf = "cname.invalid && (cname.dirty || cname.touched)"
+              class = "alert">
+          
+          <div *ngIf="cname.errors?.required">
+                Insuree Name is Required!
+          </div>
+
+      </div>
+    <label for="t5"> Cause of Loss </label>
+      <input  
+              type = "text" 
+              name = "t5" 
+              [(ngModel)] = claim.causeofloss 
+              required
+              minlength="3"
+              #ftype = "ngModel"          
+      /><br><br>
+      <div 
+              *ngIf = "ftype.invalid && (ftype.dirty || ftype.touched)"
+              class = "alert">
+          
+          <div *ngIf="ftype.errors?.required">
+                Fertilizer Type is Required!
+          </div>
+
+      </div>
+
+      <label for="t6"> Date of Loss:</label>
+      <input  
+              type = "date" 
+              name = "t6" 
+              [(ngModel)] = claim.dateofloss 
+              required
+              #quan = "ngModel"          
+      /><br><br>
+      <div 
+              *ngIf = "quan.invalid && (quan.dirty || quan.touched)"
+              class = "alert">
+          
+          <div *ngIf="quan.errors?.required">
+                Quantity is Required!
+          </div>
+
+      </div>
+
+      <label for="t7"> Amount </label>
+      <input  
+              type = "number" 
+              name = "t7" 
+              [(ngModel)] = claim.amount
+              required
+              #bp = "ngModel"          
+      /><br><br>
+      <div 
+              *ngIf = "bp.invalid && (bp.dirty || bp.touched)"
+              class = "alert">
+          
+          <div *ngIf="bp.errors?.required">
+                Enter the Bid amount!
+          </div>
+      </div>
+      <label for="t7"> Update Status </label>
+      <input  
+              type = "text" 
+              name = "t8" 
+              [(ngModel)] = claim.claimapproval
+              required
+              #st = "ngModel"          
+      /><br><br>
+      <div 
+              *ngIf = "st.invalid && (st.dirty || st.touched)"
+              class = "alert">
+          
+          <div *ngIf="st.errors?.required">
+                Enter the Status!
+          </div>
+      </div>
+      
+      <button class = "submit"
+              type="submit" > Submit
+      </button>
+</div>

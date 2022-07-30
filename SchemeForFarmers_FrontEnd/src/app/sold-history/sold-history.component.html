@@ -1,0 +1,34 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<div>
+    <h1 style="margin-left: 400px;"> Sold Crop History </h1>
+</div>
+<span>
+
+</span>
+<br>
+<div >
+    <table class="main">
+            <thead >
+            <tr>
+                <th>&nbsp;Farmer Name&nbsp;</th>
+                <th>&nbsp;Crop Name&nbsp;</th>
+                <th>&nbsp;Crop Type&nbsp;</th>
+                <th>&nbsp;Quantity&nbsp;</th>
+                <th>&nbsp;Bidder Name&nbsp;</th>
+                <th>&nbsp;Amount&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let c of crops" class ="active-row">
+                    <td>{{c.farmer.farmerFirstName}}</td>
+                    <td>{{c.crop.cropName}}</td>
+                    <td>{{c.crop.croptype}}</td>
+                    <td>{{c.crop.quantity}}</td>
+                    <td>{{c.bidder.bidderFirstName}}</td>
+                    <td>{{c.bidprice}}</td>
+                </tr>
+            </tbody>
+    </table>
+</div>
