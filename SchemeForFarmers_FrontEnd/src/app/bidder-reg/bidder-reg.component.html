@@ -233,7 +233,7 @@
         <img src="assets/bidder.jpg" width="135" height="135" style="display: block; margin-left: auto; margin-right: auto;">
         <h1 style="margin-left: 10px;">Bidder Registration</h1>
 
-        <label for="t1"> First Name:</label>
+        <label for="t1"> First Name: </label>
       <input  
               type = "text" 
               name = "t1" 
@@ -247,16 +247,16 @@
               class = "alert">
           
           <div *ngIf="fname.errors?.required">
-                First Name is Required!
+                First Name is Required
           </div>
           
           <div *ngIf = "fname.errors?.minlength">
-                First Name must be atleast 3 characters long
+                First Name must be atleast 3 characters
           </div>
 
       </div>
 
-      <label for="t2"> Last Name:</label>
+      <label for="t2"> Last Name: </label>
       <input  
               type = "text" 
               name = "t2" 
@@ -270,7 +270,7 @@
               class = "alert">
           
           <div *ngIf="lname.errors?.required">
-                Last Name is Required!
+                Last Name is Required
           </div>
           
           <div *ngIf = "lname.errors?.minlength">
@@ -280,7 +280,7 @@
       </div>
 
 
-      <label for="t3">Email ID:</label>
+      <label for="t3">Email ID: </label>
       <input 
               type ="email" 
               name = "t3" 
@@ -293,14 +293,14 @@
             *ngIf = "email.invalid && (email.dirty || email.touched)"
             class = "alert">
             <div *ngIf="email.errors?.required">
-                  Email is Required!
+                  Email is Required
             </div>
             <div *ngIf="email.errors?.email">
-                  Email is Wrong format! Right format : xyx@gmail.com
+                  Email is Wrong format! Right format : xyz@example.com
             </div>
       </div>
 
-      <label for="t4">Password:</label>
+      <label for="t4">Password: </label>
       <input 
               type ="password" 
               name = "t4" 
@@ -314,7 +314,7 @@
             class = "alert">
    
             <div *ngIf="pass.errors?.required">
-                        Enter you password!
+                        Enter you password
             </div>
    
             <div *ngIf = "pass.errors?.minlength">
@@ -322,7 +322,7 @@
             </div>
         </div>      
 
-        <label for="t5">Confirm Password:</label>
+        <label for="t5">Confirm Password: </label>
       <input 
               type ="password" 
               name = "t5" 
@@ -336,15 +336,15 @@
             class = "alert">
    
             <div *ngIf="cpass.errors?.required">
-                        Enter you password!
+                        Enter you password
             </div>
    
             <div *ngIf = "cpass.errors?.minlength">
-                        password must be atleast 6 characters
+                        Password must be atleast 6 characters
             </div>
         </div> 
 
-        <label for="t6">Contact Number:</label>
+        <label for="t6">Contact Number: </label>
       <input 
               type ="number" 
               name = "t6" 
@@ -358,7 +358,7 @@
             class = "alert">
    
             <div *ngIf="cno.errors?.required">
-                        Enter your number!
+                        Enter your number
             </div>
    
             <div *ngIf = "cno.errors?.minlength">
@@ -366,7 +366,7 @@
             </div>
         </div> 
 
-        <label for="t7">Aadhar Number:</label>
+        <label for="t7">Aadhar Number: </label>
       <input 
               type ="number" 
               name = "t7" 
@@ -380,7 +380,7 @@
             class = "alert">
    
             <div *ngIf="ano.errors?.required">
-                        Enter your Aadhar number!
+                        Enter your Aadhar number
             </div>
    
             <div *ngIf = "ano.errors?.length">
@@ -388,7 +388,7 @@
             </div>
         </div> 
 
-        <label for="t8">Trader Licence Number:</label>
+        <label for="t8">Trader Licence Number: </label>
       <input 
               type ="number" 
               name = "t8" 
@@ -402,7 +402,7 @@
             class = "alert">
    
             <div *ngIf="tno.errors?.required">
-                        Enter your Trader Licence number!
+                        Enter your Trader Licence number
             </div>
    
             <div *ngIf = "tno.errors?.length">
@@ -410,7 +410,7 @@
             </div>
         </div> 
 
-        <label for="t9">Balance:</label>
+        <label for="t9">Balance: </label>
       <input 
               type ="number" 
               name = "t9" 
@@ -424,14 +424,14 @@
             class = "alert">
    
             <div *ngIf="bal.errors?.required">
-                        Enter your Balance!
+                        Enter your Balance
+
             </div>
    
             <div *ngIf = "bal.errors?.length">
-                        Balance must be above 1000 Rs. 
+                        Balance must be above Rs. 1000 
             </div>
         </div> 
 
       <button 
-              type="submit"> Register
-      </button>
+              type="submit"> Register  </button>
