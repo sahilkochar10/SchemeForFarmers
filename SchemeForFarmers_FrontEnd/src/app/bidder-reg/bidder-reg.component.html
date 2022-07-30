@@ -231,9 +231,9 @@
 <form (ngSubmit)="register()">
     <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
         <img src="assets/bidder.jpg" width="135" height="135" style="display: block; margin-left: auto; margin-right: auto;">
-        <h1 style="margin-left: 10px;">Bidder Registration</h1>
+        <h1 style="text-align: center;">Bidder Registration</h1>
 
-        <label for="t1"> First Name:</label>
+        <label for="t1"> First Name: </label>
       <input  
               type = "text" 
               name = "t1" 
@@ -241,22 +241,22 @@
               required
               minlength="3"
               #fname = "ngModel"          
-      /><br><br>
+      />
       <div 
               *ngIf = "fname.invalid && (fname.dirty || fname.touched)"
               class = "alert">
           
           <div *ngIf="fname.errors?.required">
-                First Name is Required!
+                First Name is Required
           </div>
           
           <div *ngIf = "fname.errors?.minlength">
-                First Name must be atleast 3 characters long
+                First Name must be atleast 3 characters
           </div>
 
       </div>
-
-      <label for="t2"> Last Name:</label>
+      <br><br>
+      <label for="t2"> Last Name: </label>
       <input  
               type = "text" 
               name = "t2" 
@@ -264,13 +264,13 @@
               required
               minlength="1"
               #lname = "ngModel"          
-      /><br><br>
+      />
       <div 
               *ngIf = "lname.invalid && (lname.dirty || lname.touched)"
               class = "alert">
           
           <div *ngIf="lname.errors?.required">
-                Last Name is Required!
+                Last Name is Required
           </div>
           
           <div *ngIf = "lname.errors?.minlength">
@@ -278,9 +278,9 @@
           </div>
 
       </div>
+      <br><br>
 
-
-      <label for="t3">Email ID:</label>
+      <label for="t3">Email ID: </label>
       <input 
               type ="email" 
               name = "t3" 
@@ -288,19 +288,19 @@
               required    
               email
               #email="ngModel"    
-      /><br><br>
+      />
       <div 
             *ngIf = "email.invalid && (email.dirty || email.touched)"
             class = "alert">
             <div *ngIf="email.errors?.required">
-                  Email is Required!
+                  Email is Required
             </div>
             <div *ngIf="email.errors?.email">
-                  Email is Wrong format! Right format : xyx@gmail.com
+                  Email is Wrong format! Right format : xyz@example.com
             </div>
       </div>
-
-      <label for="t4">Password:</label>
+      <br><br>
+      <label for="t4">Password: </label>
       <input 
               type ="password" 
               name = "t4" 
@@ -308,21 +308,21 @@
               required
               minlength="6"
               #pass="ngModel"
-       /><br><br>
+       />
        <div 
             *ngIf = "pass.invalid && (pass.dirty || pass.touched)"
             class = "alert">
    
             <div *ngIf="pass.errors?.required">
-                        Enter you password!
+                        Enter you password
             </div>
    
             <div *ngIf = "pass.errors?.minlength">
                         Password must be atleast 6 characters
             </div>
         </div>      
-
-        <label for="t5">Confirm Password:</label>
+        <br><br>
+        <label for="t5">Confirm Password: </label>
       <input 
               type ="password" 
               name = "t5" 
@@ -330,21 +330,21 @@
               required
               minlength="6"
               #cpass="ngModel"
-       /><br><br>
+       />
        <div 
             *ngIf = "cpass.invalid && (cpass.dirty || cpass.touched)"
             class = "alert">
    
             <div *ngIf="cpass.errors?.required">
-                        Enter you password!
+                        Enter you password
             </div>
    
             <div *ngIf = "cpass.errors?.minlength">
-                        password must be atleast 6 characters
+                        Password must be atleast 6 characters
             </div>
         </div> 
-
-        <label for="t6">Contact Number:</label>
+        <br><br>
+        <label for="t6">Contact Number: </label>
       <input 
               type ="number" 
               name = "t6" 
@@ -352,21 +352,21 @@
               required
               minlength="10"
               #cno="ngModel"
-       /><br><br>
+       />
        <div 
             *ngIf = "cno.invalid && (cno.dirty || cno.touched)"
             class = "alert">
    
             <div *ngIf="cno.errors?.required">
-                        Enter your number!
+                        Enter your number
             </div>
    
             <div *ngIf = "cno.errors?.minlength">
                         Number must be atleast 10 characters
             </div>
         </div> 
-
-        <label for="t7">Aadhar Number:</label>
+        <br><br>
+        <label for="t7">Aadhar Number: </label>
       <input 
               type ="number" 
               name = "t7" 
@@ -374,21 +374,21 @@
               required
               length="12"
               #ano="ngModel"
-       /><br><br>
+       />
        <div 
             *ngIf = "ano.invalid && (ano.dirty || ano.touched)"
             class = "alert">
    
             <div *ngIf="ano.errors?.required">
-                        Enter your Aadhar number!
+                        Enter your Aadhar number
             </div>
    
             <div *ngIf = "ano.errors?.length">
                         Aadhar Number must be 12 characters
             </div>
         </div> 
-
-        <label for="t8">Trader Licence Number:</label>
+        <br><br>
+        <label for="t8">Trader Licence Number: </label>
       <input 
               type ="number" 
               name = "t8" 
@@ -396,21 +396,21 @@
               required
               minlength="2"
               #tno="ngModel"
-       /><br><br>
+       />
        <div 
             *ngIf = "tno.invalid && (tno.dirty || tno.touched)"
             class = "alert">
    
             <div *ngIf="tno.errors?.required">
-                        Enter your Trader Licence number!
+                        Enter your Trader Licence number
             </div>
    
             <div *ngIf = "tno.errors?.length">
                         Aadhar Number must be min 2 characters
             </div>
         </div> 
-
-        <label for="t9">Balance:</label>
+        <br><br>
+        <label for="t9">Balance: </label>
       <input 
               type ="number" 
               name = "t9" 
@@ -418,20 +418,20 @@
               required
               minlength="4"
               #bal="ngModel"
-       /><br><br>
+       />
        <div 
             *ngIf = "bal.invalid && (bal.dirty || bal.touched)"
             class = "alert">
    
             <div *ngIf="bal.errors?.required">
-                        Enter your Balance!
+                        Enter your Balance
+
             </div>
    
             <div *ngIf = "bal.errors?.length">
-                        Balance must be above 1000 Rs. 
+                        Balance must be above Rs. 1000 
             </div>
         </div> 
-
+        <br><br>
       <button 
-              type="submit"> Register
-      </button>
+              type="submit"> Register  </button>

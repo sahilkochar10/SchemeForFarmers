@@ -18,7 +18,7 @@ export class AdminloginComponent implements OnInit {
   }
   checkLogin(){
     console.log(this.emailid+" "+this.password);
-    if(this.emailid=="deepak@gmail.com" && this.password=="deepak123"){
+    if(this.emailid=="kocharsahil17@gmail.com" && this.password=="1234"){
       sessionStorage.setItem("email",this.emailid);
       //localStorage.setItem("uname",this.username);
       this.router.navigate(['/adminHome'])
