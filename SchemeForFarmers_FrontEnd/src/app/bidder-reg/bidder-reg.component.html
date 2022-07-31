@@ -217,220 +217,207 @@
 
 
  -->
- 
+
 <body>
- <div class="w3-top">
+  <div class="w3-top">
     <div class="w3-bar w3-white w3-card" id="myNavbar">
-      <img src="assets/websitelogo.jpg" width="70px" height="70px" style="float: left;">
-      <a href="#home" class="w3-bar-item w3-button w3-wide"><b>KISAAN BAZAAR</b></a>
+      <img
+        src="assets/websitelogo.jpg"
+        width="70px"
+        height="70px"
+        style="float: left"
+      />
+      <a href="#home" class="w3-bar-item w3-button w3-wide"
+        ><b>KISAAN BAZAAR</b></a
+      >
     </div>
-</div>
+  </div>
 
-<div class="main">
-
-<form (ngSubmit)="register()">
-    <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
-        <img src="assets/bidder.jpg" width="135" height="135" style="display: block; margin-left: auto; margin-right: auto;">
-        <h1 style="text-align: center;">Bidder Registration</h1>
+  <div class="main">
+    <form (ngSubmit)="register()">
+      <div class="login-box" style="border-radius: 5%; box-shadow: black">
+        <img
+          src="assets/bidder.jpg"
+          width="135"
+          height="135"
+          style="display: block; margin-left: auto; margin-right: auto"
+        />
+        <h1
+          style="
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+          "
+        >
+          Bidder Registration
+        </h1>
 
         <label for="t1"> First Name: </label>
-      <input  
-              type = "text" 
-              name = "t1" 
-              [(ngModel)] = bidder.bidderFirstName 
-              required
-              minlength="3"
-              #fname = "ngModel"          
-      />
-      <div 
-              *ngIf = "fname.invalid && (fname.dirty || fname.touched)"
-              class = "alert">
-          
-          <div *ngIf="fname.errors?.required">
-                First Name is Required
-          </div>
-          
-          <div *ngIf = "fname.errors?.minlength">
-                First Name must be atleast 3 characters
-          </div>
+        <input
+          type="text"
+          name="t1"
+          [(ngModel)]="bidder.bidderFirstName"
+          required
+          minlength="3"
+          #fname="ngModel"
+        />
+        <div
+          *ngIf="fname.invalid && (fname.dirty || fname.touched)"
+          class="alert"
+        >
+          <div *ngIf="fname.errors?.required">First Name is Required</div>
 
-      </div>
-      <br><br>
-      <label for="t2"> Last Name: </label>
-      <input  
-              type = "text" 
-              name = "t2" 
-              [(ngModel)] = bidder.bidderLastName 
-              required
-              minlength="1"
-              #lname = "ngModel"          
-      />
-      <div 
-              *ngIf = "lname.invalid && (lname.dirty || lname.touched)"
-              class = "alert">
-          
-          <div *ngIf="lname.errors?.required">
-                Last Name is Required
+          <div *ngIf="fname.errors?.minlength">
+            First Name must be atleast 3 characters
           </div>
-          
-          <div *ngIf = "lname.errors?.minlength">
-                Last Name must be atleast 1 character long
+        </div>
+        <br /><br />
+        <label for="t2"> Last Name: </label>
+        <input
+          type="text"
+          name="t2"
+          [(ngModel)]="bidder.bidderLastName"
+          required
+          minlength="1"
+          #lname="ngModel"
+        />
+        <div
+          *ngIf="lname.invalid && (lname.dirty || lname.touched)"
+          class="alert"
+        >
+          <div *ngIf="lname.errors?.required">Last Name is Required</div>
+
+          <div *ngIf="lname.errors?.minlength">
+            Last Name must be atleast 1 character long
           </div>
+        </div>
+        <br /><br />
 
-      </div>
-      <br><br>
+        <label for="t3">Email ID: </label>
+        <input
+          type="email"
+          name="t3"
+          [(ngModel)]="bidder.email"
+          required
+          email
+          #email="ngModel"
+        />
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="alert"
+        >
+          <div *ngIf="email.errors?.required">Email is Required</div>
+          <div *ngIf="email.errors?.email">
+            Email is Wrong format! Right format : xyz@example.com
+          </div>
+        </div>
+        <br /><br />
+        <label for="t4">Password: </label>
+        <input
+          type="password"
+          name="t4"
+          [(ngModel)]="bidder.password"
+          required
+          minlength="6"
+          #pass="ngModel"
+        />
+        <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="alert">
+          <div *ngIf="pass.errors?.required">Enter you password</div>
 
-      <label for="t3">Email ID: </label>
-      <input 
-              type ="email" 
-              name = "t3" 
-              [(ngModel)]=bidder.email 
-              required    
-              email
-              #email="ngModel"    
-      />
-      <div 
-            *ngIf = "email.invalid && (email.dirty || email.touched)"
-            class = "alert">
-            <div *ngIf="email.errors?.required">
-                  Email is Required
-            </div>
-            <div *ngIf="email.errors?.email">
-                  Email is Wrong format! Right format : xyz@example.com
-            </div>
-      </div>
-      <br><br>
-      <label for="t4">Password: </label>
-      <input 
-              type ="password" 
-              name = "t4" 
-              [(ngModel)]=bidder.password 
-              required
-              minlength="6"
-              #pass="ngModel"
-       />
-       <div 
-            *ngIf = "pass.invalid && (pass.dirty || pass.touched)"
-            class = "alert">
-   
-            <div *ngIf="pass.errors?.required">
-                        Enter you password
-            </div>
-   
-            <div *ngIf = "pass.errors?.minlength">
-                        Password must be atleast 6 characters
-            </div>
-        </div>      
-        <br><br>
+          <div *ngIf="pass.errors?.minlength">
+            Password must be atleast 6 characters
+          </div>
+        </div>
+        <br /><br />
         <label for="t5">Confirm Password: </label>
-      <input 
-              type ="password" 
-              name = "t5" 
-              [(ngModel)]=bidder.password 
-              required
-              minlength="6"
-              #cpass="ngModel"
-       />
-       <div 
-            *ngIf = "cpass.invalid && (cpass.dirty || cpass.touched)"
-            class = "alert">
-   
-            <div *ngIf="cpass.errors?.required">
-                        Enter you password
-            </div>
-   
-            <div *ngIf = "cpass.errors?.minlength">
-                        Password must be atleast 6 characters
-            </div>
-        </div> 
-        <br><br>
-        <label for="t6">Contact Number: </label>
-      <input 
-              type ="number" 
-              name = "t6" 
-              [(ngModel)]=bidder.contactNo
-              required
-              minlength="10"
-              #cno="ngModel"
-       />
-       <div 
-            *ngIf = "cno.invalid && (cno.dirty || cno.touched)"
-            class = "alert">
-   
-            <div *ngIf="cno.errors?.required">
-                        Enter your number
-            </div>
-   
-            <div *ngIf = "cno.errors?.minlength">
-                        Number must be atleast 10 characters
-            </div>
-        </div> 
-        <br><br>
-        <label for="t7">Aadhar Number: </label>
-      <input 
-              type ="number" 
-              name = "t7" 
-              [(ngModel)]=bidder.aadharNo
-              required
-              length="12"
-              #ano="ngModel"
-       />
-       <div 
-            *ngIf = "ano.invalid && (ano.dirty || ano.touched)"
-            class = "alert">
-   
-            <div *ngIf="ano.errors?.required">
-                        Enter your Aadhar number
-            </div>
-   
-            <div *ngIf = "ano.errors?.length">
-                        Aadhar Number must be 12 characters
-            </div>
-        </div> 
-        <br><br>
-        <label for="t8">Trader Licence Number: </label>
-      <input 
-              type ="number" 
-              name = "t8" 
-              [(ngModel)]=bidder.traderLicenseNo
-              required
-              minlength="2"
-              #tno="ngModel"
-       />
-       <div 
-            *ngIf = "tno.invalid && (tno.dirty || tno.touched)"
-            class = "alert">
-   
-            <div *ngIf="tno.errors?.required">
-                        Enter your Trader Licence number
-            </div>
-   
-            <div *ngIf = "tno.errors?.length">
-                        Aadhar Number must be min 2 characters
-            </div>
-        </div> 
-        <br><br>
-        <label for="t9">Balance: </label>
-      <input 
-              type ="number" 
-              name = "t9" 
-              [(ngModel)]=bidder.balance
-              required
-              minlength="4"
-              #bal="ngModel"
-       />
-       <div 
-            *ngIf = "bal.invalid && (bal.dirty || bal.touched)"
-            class = "alert">
-   
-            <div *ngIf="bal.errors?.required">
-                        Enter your Balance
+        <input
+          type="password"
+          name="t5"
+          [(ngModel)]="bidder.password"
+          required
+          minlength="6"
+          #cpass="ngModel"
+        />
+        <div
+          *ngIf="cpass.invalid && (cpass.dirty || cpass.touched)"
+          class="alert"
+        >
+          <div *ngIf="cpass.errors?.required">Enter you password</div>
 
-            </div>
-   
-            <div *ngIf = "bal.errors?.length">
-                        Balance must be above Rs. 1000 
-            </div>
-        </div> 
-        <br><br>
-      <button class="btn" type="submit"> Register  </button>
+          <div *ngIf="cpass.errors?.minlength">
+            Password must be atleast 6 characters
+          </div>
+        </div>
+        <br /><br />
+        <label for="t6">Contact Number: </label>
+        <input
+          type="number"
+          name="t6"
+          [(ngModel)]="bidder.contactNo"
+          required
+          minlength="10"
+          #cno="ngModel"
+        />
+        <div *ngIf="cno.invalid && (cno.dirty || cno.touched)" class="alert">
+          <div *ngIf="cno.errors?.required">Enter your number</div>
+
+          <div *ngIf="cno.errors?.minlength">
+            Number must be atleast 10 characters
+          </div>
+        </div>
+        <br /><br />
+        <label for="t7">Aadhar Number: </label>
+        <input
+          type="number"
+          name="t7"
+          [(ngModel)]="bidder.aadharNo"
+          required
+          length="12"
+          #ano="ngModel"
+        />
+        <div *ngIf="ano.invalid && (ano.dirty || ano.touched)" class="alert">
+          <div *ngIf="ano.errors?.required">Enter your Aadhar number</div>
+
+          <div *ngIf="ano.errors?.length">
+            Aadhar Number must be 12 characters
+          </div>
+        </div>
+        <br /><br />
+        <label for="t8">Trader Licence Number: </label>
+        <input
+          type="number"
+          name="t8"
+          [(ngModel)]="bidder.traderLicenseNo"
+          required
+          minlength="2"
+          #tno="ngModel"
+        />
+        <div *ngIf="tno.invalid && (tno.dirty || tno.touched)" class="alert">
+          <div *ngIf="tno.errors?.required">
+            Enter your Trader Licence number
+          </div>
+
+          <div *ngIf="tno.errors?.length">
+            Aadhar Number must be min 2 characters
+          </div>
+        </div>
+        <br /><br />
+        <label for="t9">Balance: </label>
+        <input
+          type="number"
+          name="t9"
+          [(ngModel)]="bidder.balance"
+          required
+          minlength="4"
+          #bal="ngModel"
+        />
+        <div *ngIf="bal.invalid && (bal.dirty || bal.touched)" class="alert">
+          <div *ngIf="bal.errors?.required">Enter your Balance</div>
+
+          <div *ngIf="bal.errors?.length">Balance must be above Rs. 1000</div>
+        </div>
+        <br /><br />
+        <button class="btn" type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+</body>

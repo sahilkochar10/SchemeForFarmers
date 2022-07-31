@@ -1,5 +1,4 @@
 <div class="main">
-<<<<<<< HEAD
   <form (ngSubmit)="register()">
     <div class="login-box" style="border-radius: 5%; box-shadow: black">
       <img
@@ -8,17 +7,15 @@
         height="135"
         style="display: block; margin-left: auto; margin-right: auto"
       />
-      <h1 style="text-align: center">Sell Crop Details</h1>
+      <h1
+        style="
+          text-align: center;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        "
+      >
+        Sell Crop Details
+      </h1>
       <!-- <label for="t8"> FarmerId:</label>
-=======
-
-<form (ngSubmit)="register()">
-    <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
-        <img src="assets/farmer.jpg" width="135" height="135" style="display: block; margin-left: auto; margin-right: auto;">
-        <h1 style="text-align: center;">Sell Crop Details</h1>
-       <br>
-        <!-- <label for="t8"> FarmerId:</label>
->>>>>>> b68a0c92fea0635e987bcc6ccb15f03b4f7671ae
       <input  
               type = "number" 
               name = "t8" 
@@ -27,7 +24,6 @@
               minlength="3"
               #fid = "ngModel"          
       /><br><br> -->
-<<<<<<< HEAD
       <label for="t1"> Crop Name:</label>
       <input
         type="text"
@@ -42,34 +38,12 @@
         class="alert"
       >
         <div *ngIf="cname.errors?.required">Crop Name is Required!</div>
-=======
-        <label for="t1"> Crop Name: </label>
-      <input  
-              type = "text" 
-              name = "t1" 
-              [(ngModel)] = crop.cropName 
-              required
-              minlength="3"
-              #cname = "ngModel"          
-      />
-      <div 
-              *ngIf = "cname.invalid && (cname.dirty || cname.touched)"
-              class = "alert">
-          
-          <div *ngIf="cname.errors?.required">
-                Crop Name is Required!
-          </div>
-          
-          <div *ngIf = "cname.errors?.minlength">
-                Crop Name must be atleast 3 characters long
-          </div>
->>>>>>> b68a0c92fea0635e987bcc6ccb15f03b4f7671ae
 
         <div *ngIf="cname.errors?.minlength">
           Crop Name must be atleast 3 characters long
         </div>
       </div>
-      <br><br>
+      <br /><br />
       <label for="t2"> Crop Type:</label>
       <select
         [(ngModel)]="crop.croptype"
@@ -82,7 +56,6 @@
       </select>
       <br /><br />
 
-<<<<<<< HEAD
       <label for="t3"> Fertilizer:</label>
       <input
         type="text"
@@ -127,63 +100,3 @@
     </div>
   </form>
 </div>
-=======
-      <label for="t3"> Fertilizer: </label>
-      <input  
-              type = "text" 
-              name = "t3" 
-              [(ngModel)] = crop.fertilizertype 
-              required
-              minlength="3"
-              #ftype = "ngModel"          
-      />
-      <div 
-              *ngIf = "ftype.invalid && (ftype.dirty || ftype.touched)"
-              class = "alert">
-          
-          <div *ngIf="ftype.errors?.required">
-                Fertilizer Type is Required!
-          </div>
-
-      </div>
-      <br><br>
-      <label for="t4"> Quantity: </label>
-      <input  
-              type = "number" 
-              name = "t4" 
-              [(ngModel)] = crop.quantity 
-              required
-              #quan = "ngModel"          
-      />
-      <div 
-              *ngIf = "quan.invalid && (quan.dirty || quan.touched)"
-              class = "alert">
-          
-          <div *ngIf="ftype.errors?.required">
-                Quantity is Required!
-          </div>
-
-      </div>
-      <br><br>
-      <label for="t5">Base Price: </label>
-      <input  
-              type = "number" 
-              name = "t5" 
-              [(ngModel)] = crop.baseprice
-              required
-              #bp = "ngModel"          
-      />
-      <div 
-              *ngIf = "bp.invalid && (bp.dirty || bp.touched)"
-              class = "alert">
-          
-          <div *ngIf="bp.errors?.required">
-                Base Price is Required!
-          </div>
-          <br><br>
-      </div>
-      <br><br>
-      <button 
-              type="submit"> Submit
-      </button>
->>>>>>> b68a0c92fea0635e987bcc6ccb15f03b4f7671ae
