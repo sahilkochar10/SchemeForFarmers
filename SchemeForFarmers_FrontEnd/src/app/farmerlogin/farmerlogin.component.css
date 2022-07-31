@@ -14,7 +14,54 @@ body {
 
     background-repeat: no-repeat;
     background-size: cover;*/
+<<<<<<< HEAD
   background-color: rgb(210, 227, 223);
+=======
+    background-color: rgb(214, 240, 181);
+    
+    width:400px;
+    height:500px;
+    
+    color:rgb(15, 14, 14);
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding:70px 30px;
+    padding-top: 2em;
+    }
+.idSpace
+{
+    margin-right: 3%;
+}
+.passSpace
+{
+    margin-right: 1%;
+}
+.btn {
+    border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  .btn1 {border-radius: 10px;}
+  
+  .btn:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+>>>>>>> 722c25c8611a7b3691207b7c65d7b81ce947b7b4
 
   width: 400px;
   height: 500px;

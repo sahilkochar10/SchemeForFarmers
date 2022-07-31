@@ -47,6 +47,7 @@
         </div>
      -->
 
+<<<<<<< HEAD
         <label for="t2">Enter Email ID: </label>
         <input
           type="email"
@@ -55,6 +56,18 @@
           required
         /><br /><br />
         <!-- <div 
+=======
+     <label for="t2" class="giveSomeSpace">Enter Email ID: </label>
+      <input 
+              type ="email" 
+              name = "t2" 
+              [(ngModel)]="emailid"  
+              required    
+             
+              
+      /><br><br>
+      <!-- <div 
+>>>>>>> 722c25c8611a7b3691207b7c65d7b81ce947b7b4
             *ngIf = "emailid.invalid && (emailid.dirty || emailid.touched)"
             class = "alert">
             <div *ngIf="emailid.errors?.required">
@@ -65,6 +78,7 @@
             </div>
       </div> -->
 
+<<<<<<< HEAD
         <label for="t3">Enter Password: </label>
         <input
           type="password"
@@ -90,6 +104,20 @@
           >
             Login</button
           ><br /><br />
+=======
+      <label for="t3" class="spacePassword">Enter Password: </label>
+      <input 
+              type ="password" 
+              name = "t3" 
+              [(ngModel)]="password"  
+              required
+              minlength="6"
+              
+       /><br><br>
+      
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn1">Login</button><br><br>
+>>>>>>> 722c25c8611a7b3691207b7c65d7b81ce947b7b4
         </div>
       </div>
     </form>

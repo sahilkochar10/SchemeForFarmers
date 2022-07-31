@@ -30,7 +30,34 @@ body{
     padding:70px 30px;
     padding-top: 2em;
     }
-
-
+.giveSomeSpace
+{
+    margin-right:3%;
+}
+.spacePassword
+{
+    margin-right:2%;
+}
+.btn {
+    border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  .btn1 {border-radius: 10px;}
+  
+  .btn:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
 
 

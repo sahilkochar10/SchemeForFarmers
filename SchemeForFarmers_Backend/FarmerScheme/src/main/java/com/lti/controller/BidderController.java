@@ -55,13 +55,6 @@ public class BidderController {
 	public Bidder login(@RequestBody LoginDto loginDto) {
 		try {
 			Bidder bidder = bidderService.login(loginDto.getEmail(), loginDto.getPassword());
-//			LoginStatus loginStatus = new LoginStatus();
-//			loginStatus.setStatus(StatusType.SUCCESS);
-//			loginStatus.setMessage("Login Successful!");
-//			loginStatus.setBidderId(bidder.getBidderId());
-//			loginStatus.setName(bidder.getBidderFirstName());
-//			System.out.println(loginStatus.getBidderId());
-//			return loginStatus;
 			return bidder;
 		}
 		catch(BidderServiceException e) {
