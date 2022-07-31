@@ -237,7 +237,7 @@
         <img src="assets/farmer.jpg" width="225" height="120" style="display: block; margin-left: auto; margin-right: auto;">
         <h1 style="text-align: center;">Farmer Registration</h1>
 
-        <label for="t1"> First Name: </label>
+        <label for="t1" class="firstspace"> First Name: </label>
       <input  
               type = "text" 
               name = "t1" 
@@ -261,7 +261,7 @@
       </div>
       <br><br>
 
-      <label for="t2"> Last Name: </label>
+      <label for="t2" class="lastspace"> Last Name: </label>
       <input  
               type = "text" 
               name = "t2" 
@@ -285,7 +285,7 @@
       </div>
       <br><br>
 
-      <label for="t3">Email ID: </label>
+      <label for="t3" class="emailspace">Email ID: </label>
       <input 
               type ="email" 
               name = "t3" 
@@ -306,7 +306,7 @@
       </div>
       <br><br>
 
-      <label for="t4">Password: </label>
+      <label for="t4" class="passspace">Password: </label>
       <input 
               type ="password" 
               name = "t4" 
@@ -329,7 +329,7 @@
         </div>      
         <br><br>
         <label for="t5">Confirm Password: </label>
-      <input 
+      <input class="conpassinput"
               type ="password" 
               name = "t5" 
               [(ngModel)]=farmer.password 
@@ -352,6 +352,7 @@
         <br><br>
         <label for="t6">Contact Number: </label>
       <input 
+      class="contactspace"
               type ="number" 
               name = "t6" 
               [(ngModel)]=farmer.contactNo
@@ -374,6 +375,7 @@
         <br><br>
         <label for="t7">Aadhar Number: </label>
       <input 
+      class="contactspace"
               type ="number" 
               name = "t7" 
               [(ngModel)]=farmer.aadharNo
@@ -395,8 +397,9 @@
         </div> 
         <br><br>
         <div>
-        <label for="t8">Land Area: </label>
+        <label for="t8" class="landspace">Land Area: </label>
       <input 
+              
               type ="text" 
               name = "t8" 
               [(ngModel)]=farmer.landDetails
@@ -413,7 +416,7 @@
         </div>
     </div>
     <br><br>
-        <label for="t9">Balance: </label>
+        <label for="t9" class="firstspace">Balance: </label>
       <input 
               type ="number" 
               name = "t9" 
@@ -435,7 +438,7 @@
             </div>
         </div> 
         <br><br>
-      <button class="btn"
+      <button class="btn btn1"
               type="submit"> Register
       </button>
     </div>

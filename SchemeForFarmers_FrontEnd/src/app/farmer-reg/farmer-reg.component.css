@@ -59,12 +59,38 @@ body{
     color: black; 
     border: 2px solid #4CAF50;
   }
-  
+  .btn1 {border-radius: 10px;}
   .btn:hover {
     background-color: #4CAF50;
     color: white;
   }
-
-
+.firstspace
+{
+  margin-right: 3%;
+}
+.lastspace
+{
+  margin-right: 4%;
+}
+.emailspace
+{
+  margin-right: 7%;
+}
+.passspace
+{
+  margin-right: 6%;
+}
+.conpassinput
+{
+  margin-left: 3%;
+}
+.landspace
+{
+  margin-right: 7%;
+}
+.contactspace
+{
+  margin-left: 5%;
+}
 
 
