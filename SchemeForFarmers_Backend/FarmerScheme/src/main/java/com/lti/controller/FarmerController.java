@@ -61,13 +61,6 @@ public class FarmerController {
 		public Farmer login(@RequestBody LoginDto loginDto) {
 			try {
 				Farmer farmer = farmerService.farmerLogin(loginDto.getEmail(), loginDto.getPassword());
-//				LoginStatus loginStatus = new LoginStatus();
-//				loginStatus.setStatus(StatusType.SUCCESS);
-//				loginStatus.setMessage("Login Successful!");
-//				loginStatus.setBidderId(farmer.getFarmerId());
-//				loginStatus.setName(farmer.getFarmerFirstName());
-//				System.out.println(loginStatus.getBidderId());
-//				return loginStatus;
 				return farmer;
 			}
 			catch(FarmerServiceException e) {
