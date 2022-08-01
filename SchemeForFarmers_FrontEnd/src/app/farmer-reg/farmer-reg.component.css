@@ -53,51 +53,10 @@ body {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-<<<<<<< HEAD
   background-color: white;
   color: black;
   border: 2px solid #4caf50;
 }
-=======
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-  }
-  .btn1 {border-radius: 10px;}
-  .btn:hover {
-    background-color: #4CAF50;
-    color: white;
-  }
-.firstspace
-{
-  margin-right: 3%;
-}
-.lastspace
-{
-  margin-right: 4%;
-}
-.emailspace
-{
-  margin-right: 7%;
-}
-.passspace
-{
-  margin-right: 6%;
-}
-.conpassinput
-{
-  margin-left: 3%;
-}
-.landspace
-{
-  margin-right: 7%;
-}
-.contactspace
-{
-  margin-left: 5%;
-}
-
->>>>>>> 722c25c8611a7b3691207b7c65d7b81ce947b7b4
 
 .btn:hover {
   background-color: #4caf50;
