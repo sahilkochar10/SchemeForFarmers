@@ -43,24 +43,27 @@
 
 
   th{
-    background-color: chartreuse;
-    border: 2px solid #A3CB38;
-}
-tr:nth-child(even) 
-{
-    background-color: #C4E538;
-}
-td{
+    text-align: left;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
     border: 2px solid black;
-    padding-bottom: 10px;
+    background-color: #55608f;
+}
+
+td{
+  padding: 15px;
+  color: black;
+  border: 2px solid black;
 }
 table{
     margin-left: 100px ;
     align-items: center;
-    border: 2px solid gray;
-    box-shadow: 2px solid greenyellow;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
     display: inline-block;
     font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
     
 }
 th{
@@ -82,12 +85,12 @@ th{
 
   text-align: center;
   text-decoration: none;
-  -webkit-animation: glowing 1500ms infinite;
+  /* -webkit-animation: glowing 1500ms infinite;
   -moz-animation: glowing 1500ms infinite;
   -o-animation: glowing 1500ms infinite;
-  animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite; */
 }
-@-webkit-keyframes glowing {
+/* @-webkit-keyframes glowing {
   0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
   50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
   100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
@@ -109,7 +112,7 @@ th{
   0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
   50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
   100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-}
+} */
 
 .login-box{
    background-repeat: repeat-y;
