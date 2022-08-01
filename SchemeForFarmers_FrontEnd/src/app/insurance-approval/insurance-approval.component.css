@@ -44,23 +44,20 @@ body {
 }
 
 th {
-  background-color: chartreuse;
-  border: 2px solid #a3cb38;
-}
-tr:nth-child(even) {
-  background-color: #c4e538;
+  text-align: left;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+    background-color: #55608f;
+    border: 2px solid black;
 }
 td {
-  border: 2px solid black;
-  padding-bottom: 10px;
+  background-color: rgba(28, 121, 56, 0.2);
+    border: 2px solid black;
 }
 table {
   margin-left: 100px;
   align-items: center;
-  border: 2px solid gray;
-  box-shadow: 2px solid greenyellow;
-  display: inline-block;
-  font-size: 17px;
+  border: 2px solid black;
 }
 th {
   padding: 5px;
@@ -115,8 +112,11 @@ th {
     -moz-box-shadow: 0 0 3px #b20000;
   }
 }
+tbody tr :hover {
+  background-color: rgba(255,255,255,0.3);
+}
 
-@-o-keyframes glowing {
+/* @-o-keyframes glowing {
   0% {
     background-color: #b20000;
     box-shadow: 0 0 3px #b20000;
@@ -143,8 +143,8 @@ th {
   100% {
     background-color: #b20000;
     box-shadow: 0 0 3px #b20000;
-  }
-}
+  } */
+/* } */
 
 .login-box {
   background-repeat: repeat-y;
