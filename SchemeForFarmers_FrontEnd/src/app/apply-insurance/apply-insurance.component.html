@@ -1,10 +1,10 @@
 
 <form (ngSubmit)="Submitdata()">
     <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
-        <img src="assets/farmer.jpg" width="135" height="135" style="display: block; margin-left: auto; margin-right: auto;">
-        <h1 style="margin-left: 10px;">Insurance Application</h1>
+        <img src="assets/farmer.jpg" width="225" height="135" style="display: block; margin-left: auto; margin-right: auto;">
+        <h1 style="text-align: center;">Insurance Application</h1>
 
-        <label for="t1"> Insuree Name:</label>
+        <label for="t1">Insuree Name: </label>
       <input  
               type = "text" 
               name = "t1" 
@@ -12,7 +12,7 @@
               required
               minlength="3"
               #iname = "ngModel"          
-      /><br><br>
+      />
       <div 
               *ngIf = "iname.invalid && (iname.dirty || iname.touched)"
               class = "alert">
@@ -22,12 +22,12 @@
           </div>
           
           <div *ngIf = "iname.errors?.minlength">
-                Insuree Name must be atleast 3 characters long
+                Insuree Name must be atleast 3 characters
           </div>
-
+          
       </div>
-
-      <label for="t2"> Area(in sqft):</label>
+      <br><br>
+      <label for="t2"> Area(in sqft): </label>
       <input  
               type = "number" 
               name = "t2" 
@@ -35,7 +35,7 @@
               required
               minlength="3"
               #area = "ngModel"          
-      /><br><br>
+      />
       <div 
               *ngIf = "area.invalid && (area.dirty || area.touched)"
               class = "alert">
@@ -44,7 +44,7 @@
                 Area is Required!
           </div>
       </div>
-
+      <br><br>
       <label for="t3"> Crop Name:</label>
       <input  
               type = "text" 
@@ -53,7 +53,7 @@
               required
               minlength="3"
               #cname = "ngModel"          
-      /><br><br>
+      />
       <div 
               *ngIf = "cname.invalid && (cname.dirty || cname.touched)"
               class = "alert">
@@ -62,7 +62,7 @@
                 Crop Name is Required!
           </div>
       </div>
-
+      <br><br>
       <label for="t4"> Crop Type:</label>
       <select [(ngModel)]= insurance.croptype name="insurance" id="insuranceapproval">
 
@@ -79,7 +79,7 @@
               [(ngModel)] = insurance.sumInsured 
               required
               #quan = "ngModel"          
-      /><br><br>
+      />
       <div 
               *ngIf = "quan.invalid && (quan.dirty || quan.touched)"
               class = "alert">
@@ -89,11 +89,11 @@
           </div>
 
       </div>
-
+      <br><br>
       <div class="form-group form-check">
         <button (click)="calculation()" class="btn btn-light btn-lg"
             style=" height:30px; width: 250px;border-radius: 10%; margin-top: 10px; color: rgb(255, 254, 254); background-color: rgb(231, 19, 19);"
-            >Calculate Estimated Amount and Sumbit</button><br><br>
+            >Submit/Estimated amount</button><br><br>
     
         <!-- <button type="submit" class="btn btn-light btn-lg"
             style="  width: 100px;border-radius: 10%; margin-top: 10px; color: rgb(255, 254, 254); background-color: rgb(231, 19, 19);"

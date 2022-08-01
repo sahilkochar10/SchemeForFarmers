@@ -1,10 +1,22 @@
 <body>
-    <div class="main">
-    <form  (ngSubmit)="checkLogin()" >
-    <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
-        <img src="assets/admin.jpg" width="135" height="135" style="display: block; margin-left: auto; margin-right: auto;">
-        <h1 style="text-align: center;">Admin Login</h1>
-        <br>
+  <div class="main">
+    <form (ngSubmit)="checkLogin()">
+      <div class="login-box" style="border-radius: 5%; box-shadow: black">
+        <img
+          src="assets/admin.jpg"
+          width="135"
+          height="135"
+          style="display: block; margin-left: auto; margin-right: auto"
+        />
+        <h1
+          style="
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+          "
+        >
+          Admin Login
+        </h1>
+        <br />
         <!-- <p class="form-group col-10" >
             
             <label for="emailid" ><h5 style="font-size: 20px;">Email</h5></label>
@@ -35,16 +47,14 @@
         </div>
      -->
 
-     <label for="t2">Enter Email ID: </label>
-      <input 
-              type ="email" 
-              name = "t2" 
-              [(ngModel)]="emailid"  
-              required    
-             
-              
-      /><br><br>
-      <!-- <div 
+        <label for="t2">Enter Email ID: </label>
+        <input
+          type="email"
+          name="t2"
+          [(ngModel)]="emailid"
+          required
+        /><br /><br />
+        <!-- <div 
             *ngIf = "emailid.invalid && (emailid.dirty || emailid.touched)"
             class = "alert">
             <div *ngIf="emailid.errors?.required">
@@ -55,29 +65,33 @@
             </div>
       </div> -->
 
-      <label for="t3">Enter Password: </label>
-      <input 
-              type ="password" 
-              name = "t3" 
-              [(ngModel)]="password"  
-              required
-              minlength="6"
-              
-       /><br><br>
-      
+        <label for="t3">Enter Password: </label>
+        <input
+          type="password"
+          name="t3"
+          [(ngModel)]="password"
+          required
+          minlength="6"
+        /><br /><br />
+
         <div class="form-group form-check">
-            <button type="submit" class="btn btn-light btn-lg" style=" height:30px; width: 80px;border-radius: 10%; 
-            margin-top: 10px; color: rgb(68, 220, 34); background-color: rgb(0, 0, 0); margin-left: 37%;" 
-            >Login</button><br><br>
+          <button
+            type="submit"
+            class="btn btn-light btn-lg"
+            style="
+              height: 30px;
+              width: 80px;
+              border-radius: 10%;
+              margin-top: 10px;
+              color: rgb(68, 220, 34);
+              background-color: rgb(0, 0, 0);
+              margin-left: 37%;
+            "
+          >
+            Login</button
+          ><br /><br />
         </div>
-        
-        </div>   
-    
+      </div>
     </form>
-    </div>
+  </div>
 </body>
-
-
-
-
-

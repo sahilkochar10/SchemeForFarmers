@@ -5,7 +5,9 @@ body, html {
   height: 100%;
   line-height: 1.8;
 }
-
+.w3-bar .w3-button {
+  padding: 16px;
+}
 /* Full height image header */
 .bgimg-1 {
  /* background-position: center;*/
@@ -14,9 +16,7 @@ body, html {
   min-height: 45.5em;
 }
 
-.w3-bar .w3-button {
-  padding: 16px;
-}
+
 .dropdown {
     float: left;
     overflow: hidden;

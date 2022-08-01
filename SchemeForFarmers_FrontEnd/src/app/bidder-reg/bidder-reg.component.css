@@ -40,6 +40,52 @@ body{
     color: red;
 }
 
-
-
-
+.btn {
+    border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  .btn1 {border-radius: 10px;}
+  
+  .btn:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+.firstspace
+{
+  margin-right: 3%;
+}
+.lastspace
+{
+  margin-right: 4%;
+}
+.idspace
+{
+  margin-right: 6%;
+}
+.passspace
+{
+  margin-right: 4%;
+}
+.conpassspace
+{
+  margin-right: 1%;
+}
+.numberspace
+{
+  margin-right: 3%;
+}
+.aadnumberspace
+{
+  margin-right: 3%;
+}
