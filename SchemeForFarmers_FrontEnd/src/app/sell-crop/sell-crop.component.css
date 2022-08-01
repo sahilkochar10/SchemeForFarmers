@@ -13,10 +13,6 @@ body {
   display: inline-block;
 }
 .login-box {
-  /* background-image:url("src/assets/adminbackground.jpg") ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
   background-repeat: repeat-y;
   background-color: rgb(150, 210, 242);
   width: 500px;
@@ -33,7 +29,8 @@ body {
   box-sizing: border-box;
   font-family: Georgia, "Times New Roman", Times, serif;
   padding: 70px 30px;
-  padding-top: 2em;
+  padding-top: 0px;
+  margin: auto;
 }
 .alert-danger {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -74,7 +71,7 @@ body {
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   font-family: Georgia, "Times New Roman", Times, serif;
-  padding: 70px 30px;
+  padding: 70px 40px;
   padding-top: 2em;
 }
 .alert-danger {
@@ -99,4 +96,31 @@ body {
 .btn:hover {
   background-color: #4caf50;
   color: white;
+}
+
+lable {
+  font-weight: bold;
+  float: left;
+  clear: both;
+  margin-left: 5%;
+  margin: 0pc;
+}
+
+input {
+  float: right;
+  clear: none;
+  margin-right: 20px;
+}
+.ctype {
+  float: right;
+  clear: none;
+  margin-right: 20px;
+  padding: 5px;
+  width: 11pc;
+}
+img {
+  border: 1px;
+  border-radius: 8pc;
+  padding: 5px;
+  width: 150px;
 }
