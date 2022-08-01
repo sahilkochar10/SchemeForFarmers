@@ -43,25 +43,21 @@
 
 
   th{
-    background-color: chartreuse;
-    border: 2px solid #A3CB38;
-}
-tr:nth-child(even) 
-{
-    background-color: #C4E538;
-}
-td{
+    text-align: left;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+    background-color: #55608f;
     border: 2px solid black;
-    padding-bottom: 10px;
+}
+
+td{
+  background-color: rgba(28, 121, 56, 0.2);
+  border: 2px solid black;
 }
 table{
     margin-left: 100px ;
     align-items: center;
-    border: 2px solid gray;
-    box-shadow: 2px solid greenyellow;
-    display: inline-block;
-    font-size: 17px;
-    
+    border: 2px solid black;
 }
 th{
   padding: 5px;
@@ -87,7 +83,7 @@ th{
   -o-animation: glowing 1500ms infinite;
   animation: glowing 1500ms infinite;
 }
-@-webkit-keyframes glowing {
+/* @-webkit-keyframes glowing {
   0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
   50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
   100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
@@ -108,9 +104,11 @@ th{
 @keyframes glowing {
   0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
   50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-}
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; } */
 
+  tbody tr :hover {
+    background-color: rgba(255,255,255,0.3);
+}
 .login-box{
    background-repeat: repeat-y;
    background-color: rgb(214, 240, 181);

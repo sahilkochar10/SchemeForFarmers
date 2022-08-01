@@ -1,18 +1,23 @@
 th{
-    background-color: chartreuse;
-    border: 2px solid #A3CB38;
+    background-color: #55608f;
+    border: 2px solid black;
+    text-align: left;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
 }
-tr:nth-child(even) 
-{
-    background-color: #C4E538;
-}
+
 td{
+    background-color: rgba(28, 121, 56, 0.2);
     border: 2px solid black;
 }
 table{
     margin-left: 200px ;
     align-items: center;
-    border: 2px solid gray;
-    box-shadow: 2px solid greenyellow;
+    border: 2px solid black;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
     
+}
+tbody tr :hover {
+    background-color: rgba(255,255,255,0.3);
 }
