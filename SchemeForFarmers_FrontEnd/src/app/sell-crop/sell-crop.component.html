@@ -15,24 +15,18 @@
       >
         Sell Crop Details
       </h1>
-      <!-- <label for="t8"> FarmerId:</label>
-      <input  
-              type = "number" 
-              name = "t8" 
-              [(ngModel)] = crop.farmerid 
-              required
-              minlength="3"
-              #fid = "ngModel"          
-      /><br><br> -->
+
       <label for="t1"> Crop Name:</label>
       <input
         type="text"
+        style="width: auto"
         name="t1"
         [(ngModel)]="crop.cropName"
         required
         minlength="3"
         #cname="ngModel"
-      /><br /><br />
+      /><br />
+      <br />
       <div
         *ngIf="cname.invalid && (cname.dirty || cname.touched)"
         class="alert"
@@ -43,9 +37,11 @@
           Crop Name must be atleast 3 characters long
         </div>
       </div>
-      <br /><br />
+
       <label for="t2"> Crop Type:</label>
+
       <select
+        class="ctype"
         [(ngModel)]="crop.croptype"
         name="insurance"
         id="insuranceapproval"
@@ -96,7 +92,7 @@
         <div *ngIf="bp.errors?.required">Base Price is Required!</div>
       </div>
 
-      <button style="margin-left: 25%" type="submit">Submit text</button>
+      <button style="margin-left: 35%" type="submit">Submit text</button>
     </div>
   </form>
 </div>

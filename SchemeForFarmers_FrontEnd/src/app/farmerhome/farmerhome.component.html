@@ -92,12 +92,18 @@
       <li>
         <h3>
           <img src="assets/wallet.png" width="30px" height="30px" />&nbsp;
-          <a href="javascript:void(0)" (click)="bal()">Wallet </a>
+          <a
+            style="
+              font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+                serif;
+            "
+            href="javascript:void(0)"
+            (click)="bal()"
+            >Wallet
+          </a>
         </h3>
       </li>
-      <!-- <div *ngIf = "div1">
-                    {{}}
-                </div> -->
+
       <li>
         <h3>
           <img src="assets/logout.jpg" width="30px" height="30px" />&nbsp;
@@ -105,7 +111,6 @@
             style="font-family: Cabria, Cochin, Georgia, Times, serif"
             [routerLink]="['/Home']"
             >Log out</a
-          >
           >
         </h3>
       </li>
