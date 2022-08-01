@@ -18,37 +18,7 @@
           Farmer Login
         </h1>
         <br />
-        <!-- <p class="form-group col-10" >
-            
-            <label for="emailid" ><h5 style="font-size: 20px;">Email</h5></label>
-            <input type="text" id="emailid" name="emailid" class="form-control" placeholder="Enter email"
-             formControlName="emailid" />
-        </p>
-        
-        <div *ngIf="!emailid?.valid && (emailid?.dirty || emailid?.touched)" class="form-group error col-8">
-            <div *ngIf="emailid!.errors!.required">
-              Email is required
-            </div>
-        </div>
-        <div *ngIf="emailid!.errors?.pattern" class="col-8 error">
-            
-            Enter correct email
-             
-         </div>
-        
-        <p class="form-group col-10">
-            <label for = "password"><h5 style="font-size: 20px;">Password</h5></label>
-            <input type = "password" id = "password" name = "password" class="form-control" placeholder="Password" 
-            formControlName="password"/>
-        </p>
-        <div *ngIf="!password?.valid && (password?.dirty || password?.touched)" class="form-group error col-8">
-            <div *ngIf="password!.errors!.required">
-              Password is required
-            </div>
-        </div>
-     -->
-
-        <label for="t2">Enter Email Id: </label>
+        <label for="t2" class="idspace">Enter Email Id: </label>
         <input
           type="email"
           name="t2"
@@ -68,7 +38,7 @@
         </div>
         <br /><br />
 
-        <label for="t3">Enter Password: </label>
+        <label for="t3" class="passspace">Enter Password: </label>
         <input
           type="password"
           name="t3"
@@ -86,23 +56,15 @@
         </div>
         <br /><br />
 
-        <div class="form-group form-check">
+        <div style="text-align: center;">
           <button
             type="submit"
-            class="btn btn-light btn-lg"
-            style="
-              height: 30px;
-              width: 80px;
-              border-radius: 10%;
-              margin-top: 10px;
-              color: rgb(68, 220, 34);
-              background-color: rgb(0, 0, 0);
-              margin-left: 37%;
-            "
+            class="btn"
+           
           >
             Login</button
           ><br /><br />
-          <!-- <a routerLink="/ForgetPassword">Forgot Password?</a> &nbsp;&nbsp;&nbsp; -->
+          
           <a routerLink="/FarmerRegistration">New User? Register Here!!</a
           ><br />
         </div>
