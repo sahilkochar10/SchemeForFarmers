@@ -49,7 +49,6 @@ public class BidderServiceImpl implements BidderService {
 	@Override
 	public List<Bidder> viewAllUsers() {
 		return bidderRepo.findAll();
-
 	}
 	@Override
 	public void placeBid(Crop crop) {
