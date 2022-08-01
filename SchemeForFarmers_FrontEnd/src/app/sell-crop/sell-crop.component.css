@@ -118,3 +118,9 @@ input {
   padding: 5px;
   width: 11pc;
 }
+img {
+  border: 1px;
+  border-radius: 8pc;
+  padding: 5px;
+  width: 150px;
+}
