@@ -62,3 +62,16 @@ body {
   background-color: #4caf50;
   color: white;
 }
+label
+{
+  font-weight: bold;
+    float: left;
+    clear: both;
+    margin-left: 5%;
+}
+input
+{
+  float: right;
+  clear:none;
+    margin-right: 17%;
+}
