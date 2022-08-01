@@ -35,22 +35,21 @@
 </div>
 <br>
 <button class = "bid" (click)="bid()">
-Bid
-</button>
+Place Bid</button>
 <br>
 <br>
 <div *ngIf="div1" >
 <form (ngSubmit)="placeBid()">
   <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
-    <h1 style="margin-left: 10px;">Place Bid</h1>
-    <label for="t1"> Crop Id:</label>
+    <h1 style="text-align: center;">Place Bid</h1><br>
+    <label for="t1">Crop Id: </label>
     <input  
             type = "Number" 
             name = "t1" 
             [(ngModel)] = crop.cropId 
             required
             #id = "ngModel"          
-    /><br><br>
+    />
     <div 
             *ngIf = "id.invalid && (id.dirty || id.touched)"
             class = "alert">
@@ -58,14 +57,15 @@ Bid
               Crop id is Required!
         </div>
     </div>
-    <label for="t2"> Farmer Id:</label>
+    <br><br>
+    <label for="t2">Farmer Id: </label>
     <input  
             type = "Number" 
             name = "t2" 
             [(ngModel)] = crop.farmerId
             required
             #fid = "ngModel"          
-    /><br><br>
+    />
     <div 
             *ngIf = "fid.invalid && (fid.dirty || fid.touched)"
             class = "alert">
@@ -73,15 +73,16 @@ Bid
               Farmer id is Required!
         </div>
     </div>
-    <label for="t3"> Crop Type:</label>
-    <select [(ngModel)]= crop.cropType name = "t3">
+    <br><br>
+    <label for="t3">Crop Type: </label>
+    <select class="ctype" [(ngModel)]= crop.cropType name = "t3">
 
       <option value="Kharif">KHARIF</option>
       <option value="Rabi">RABI</option>    
-      <option value="Horiculture">HORICULTURE</option>                                             
+      <option value="Horiculture">HORTICULTURE</option>                                             
   </select>
   <br><br>
-  <label for="t5"> CropName</label>
+  <label for="t5">Crop Name: </label>
     <input  
             type = "text" 
             name = "t5" 
@@ -89,7 +90,7 @@ Bid
             required
             minlength="3"
             #cname = "ngModel"          
-    /><br><br>
+    />
     <div 
             *ngIf = "cname.invalid && (cname.dirty || cname.touched)"
             class = "alert">
@@ -99,7 +100,8 @@ Bid
         </div>
 
     </div>
-  <label for="t6"> Fertilizer:</label>
+    <br><br>
+  <label for="t6">Fertilizer: </label>
     <input  
             type = "text" 
             name = "t6" 
@@ -107,7 +109,7 @@ Bid
             required
             minlength="3"
             #ftype = "ngModel"          
-    /><br><br>
+    />
     <div 
             *ngIf = "ftype.invalid && (ftype.dirty || ftype.touched)"
             class = "alert">
@@ -117,15 +119,15 @@ Bid
         </div>
 
     </div>
-
-    <label for="t7"> Quantity:</label>
+    <br><br>
+    <label for="t7">Quantity: </label>
     <input  
             type = "number" 
             name = "t7" 
             [(ngModel)] = crop.quantity 
             required
             #quan = "ngModel"          
-    /><br><br>
+    />
     <div 
             *ngIf = "quan.invalid && (quan.dirty || quan.touched)"
             class = "alert">
@@ -135,15 +137,15 @@ Bid
         </div>
 
     </div>
-
-    <label for="t8"> Bid Price:</label>
+    <br><br>
+    <label for="t8">Bid Amount: </label>
     <input  
             type = "number" 
             name = "t8" 
             [(ngModel)] = crop.baseprice
             required
             #bp = "ngModel"          
-    /><br><br>
+    />
     <div 
             *ngIf = "bp.invalid && (bp.dirty || bp.touched)"
             class = "alert">
@@ -152,7 +154,9 @@ Bid
               Enter the Bid amount!
         </div>
     </div>
-    <button class = "submit"
+    <br><br>
+    <div style="text-align: center;">
+        <button class = "btn"
             type="submit" > Submit
     </button>
-</div>
+</div></div>
