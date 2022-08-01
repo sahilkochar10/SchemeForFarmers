@@ -62,16 +62,20 @@ body {
   background-color: #4caf50;
   color: white;
 }
-label
-{
+label {
   font-weight: bold;
-    float: left;
-    clear: both;
-    margin-left: 5%;
+  float: left;
+  clear: both;
+  margin-left: 5%;
 }
-input
-{
+input {
   float: right;
-  clear:none;
-    margin-right: 17%;
+  clear: none;
+  margin-right: 17%;
+}
+img {
+  border: 100px;
+  border-radius: 15pc;
+  padding: 5px;
+  width: 150px;
 }
