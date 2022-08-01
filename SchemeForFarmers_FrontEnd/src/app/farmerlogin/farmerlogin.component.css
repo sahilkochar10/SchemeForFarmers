@@ -50,11 +50,15 @@ body {
   background-color: #4caf50;
   color: white;
 }
-.idspace
-{
+.idspace {
   margin-right: 2%;
 }
-.passspace
-{
+.passspace {
   margin-right: 1%;
+}
+img {
+  border: 1px;
+  border-radius: 8pc;
+  padding: 5px;
+  width: 150px;
 }

@@ -74,3 +74,9 @@ input
   clear:none;
     margin-right: 10%;
 }
+br {
+  
+  margin-bottom: 0.1px;
+  font-size:1px;
+  line-height: 0.1px;
+}

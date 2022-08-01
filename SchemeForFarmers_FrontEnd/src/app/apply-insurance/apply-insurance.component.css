@@ -1,39 +1,76 @@
-body{
-    /*background-image: url("src\assets\farmerhome.jpg");*/
-    background-image:url("src/assets/loginbg.jpg") ;
-    background-repeat: no-repeat;
-    background-size:cover;
-    height: 50em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+body {
+  /*background-image: url("src\assets\farmerhome.jpg");*/
+  background-image: url("src/assets/loginbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50em;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.main{
-    height:47em; 
-    
-
+.main {
+  height: 47em;
 }
-.login-box{
-   /* background-image:url("src/assets/adminbackground.jpg") ;
+.login-box {
+  /* background-image:url("src/assets/adminbackground.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
     */
-    padding: 2%;
-    background-color: rgb(214, 240, 181);
-    width:400px;
-    height:700px;
-    
-    color:rgb(15, 14, 14);
-    top:60%;
-    left:55%;
-    position:absolute;
-    transform:translate(-50%,-50%);
-    box-sizing:border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding:70px 30px;
-    padding-top: 2em;
-    }
+  padding: 2%;
+  background-color: rgb(189, 250, 199);
+  width: 400px;
+  height: 700px;
 
-    
+  color: rgb(15, 14, 14);
+  top: 60%;
+  left: 55%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 70px 30px;
+  padding-top: 2em;
+}
+label {
+  font-weight: bold;
+  float: left;
+  clear: both;
+  margin-left: 5%;
+}
+input {
+  float: right;
+  clear: none;
+  margin-right: 10%;
+}
+.ctype {
+  float: right;
+  clear: none;
+  margin-right: 10%;
+  width: 11pc;
+  padding: 5px;
+}
+.btn {
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: right;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 15px;
+  margin: 3pc;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
+}
 
-
-
-
+.btn:hover {
+  background-color: #4caf50;
+  color: white;
+}
+img {
+  border: 1px;
+  border-radius: 8pc;
+  padding: 5px;
+  width: 150px;
+}
