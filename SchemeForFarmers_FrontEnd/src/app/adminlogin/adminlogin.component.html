@@ -47,25 +47,16 @@
         </div>
      -->
 
-        <label for="t2">Enter Email ID: </label>
+        <label for="t2" class="idspace">Enter Email ID: </label>
         <input
           type="email"
           name="t2"
           [(ngModel)]="emailid"
           required
         /><br /><br />
-        <!-- <div 
-            *ngIf = "emailid.invalid && (emailid.dirty || emailid.touched)"
-            class = "alert">
-            <div *ngIf="emailid.errors?.required">
-                  Email is Required!!!
-            </div>
-            <div *ngIf="emailid.errors?.emailid">
-                  Email is Wrong format!!! Right format : xyx@gmail.com
-            </div>
-      </div> -->
+      
 
-        <label for="t3">Enter Password: </label>
+        <label for="t3" class="passspace">Enter Password: </label>
         <input
           type="password"
           name="t3"
@@ -74,19 +65,11 @@
           minlength="6"
         /><br /><br />
 
-        <div class="form-group form-check">
+        <div style="text-align: center;">
           <button
             type="submit"
-            class="btn btn-light btn-lg"
-            style="
-              height: 30px;
-              width: 80px;
-              border-radius: 10%;
-              margin-top: 10px;
-              color: rgb(68, 220, 34);
-              background-color: rgb(0, 0, 0);
-              margin-left: 37%;
-            "
+            class="btn"
+            
           >
             Login</button
           ><br /><br />

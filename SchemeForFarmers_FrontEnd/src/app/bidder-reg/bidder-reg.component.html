@@ -1,14 +1,15 @@
 <body>
-  <div class="w3-top">
+  <div class="w3-top" >
     <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home">
       <img
         src="assets/websitelogo.jpg"
         width="70px"
         height="70px"
         style="float: left"
-      />
+      /></a>
       <a href="#home" class="w3-bar-item w3-button w3-wide"
-        ><b>KISAAN BAZAAR</b></a
+        ><b >KISAAN BAZAAR</b></a
       >
     </div>
   </div>
@@ -44,7 +45,7 @@
           *ngIf="fname.invalid && (fname.dirty || fname.touched)"
           class="alert"
         >
-          <div *ngIf="fname.errors?.required">First Name is Required</div>
+          <br><div *ngIf="fname.errors?.required">First Name is Required</div>
 
           <div *ngIf="fname.errors?.minlength">
             First Name must be atleast 3 characters
@@ -64,9 +65,9 @@
           *ngIf="lname.invalid && (lname.dirty || lname.touched)"
           class="alert"
         >
-          <div *ngIf="lname.errors?.required">Last Name is Required</div>
+         <br> <div *ngIf="lname.errors?.required">Last Name is Required</div>
 
-          <div *ngIf="lname.errors?.minlength">
+         <br> <div *ngIf="lname.errors?.minlength">
             Last Name must be atleast 1 character long
           </div>
         </div>
@@ -85,8 +86,8 @@
           *ngIf="email.invalid && (email.dirty || email.touched)"
           class="alert"
         >
-          <div *ngIf="email.errors?.required">Email is Required</div>
-          <div *ngIf="email.errors?.email">
+          <br><div *ngIf="email.errors?.required">Email is Required</div>
+          <br><div *ngIf="email.errors?.email">
             Email is Wrong format! Right format : xyz@example.com
           </div>
         </div>
@@ -101,9 +102,9 @@
           #pass="ngModel"
         />
         <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="alert">
-          <div *ngIf="pass.errors?.required">Enter you password</div>
+         <br> <div *ngIf="pass.errors?.required">Enter you password</div>
 
-          <div *ngIf="pass.errors?.minlength">
+          <br><div *ngIf="pass.errors?.minlength">
             Password must be atleast 6 characters
           </div>
         </div>
@@ -121,9 +122,9 @@
           *ngIf="cpass.invalid && (cpass.dirty || cpass.touched)"
           class="alert"
         >
-          <div *ngIf="cpass.errors?.required">Enter you password</div>
+         <br> <div *ngIf="cpass.errors?.required">Enter you password</div>
 
-          <div *ngIf="cpass.errors?.minlength">
+        <br>  <div *ngIf="cpass.errors?.minlength">
             Password must be atleast 6 characters
           </div>
         </div>
@@ -138,9 +139,9 @@
           #cno="ngModel"
         />
         <div *ngIf="cno.invalid && (cno.dirty || cno.touched)" class="alert">
-          <div *ngIf="cno.errors?.required">Enter your number</div>
+         <br> <div *ngIf="cno.errors?.required">Enter your number</div>
 
-          <div *ngIf="cno.errors?.minlength">
+        <br>  <div *ngIf="cno.errors?.minlength">
             Number must be atleast 10 characters
           </div>
         </div>
@@ -157,7 +158,7 @@
         <div *ngIf="ano.invalid && (ano.dirty || ano.touched)" class="alert">
           <div *ngIf="ano.errors?.required">Enter your Aadhar number</div>
 
-          <div *ngIf="ano.errors?.length">
+         <br> <div *ngIf="ano.errors?.length">
             Aadhar Number must be 12 characters
           </div>
         </div>
@@ -172,11 +173,11 @@
           #tno="ngModel"
         />
         <div *ngIf="tno.invalid && (tno.dirty || tno.touched)" class="alert">
-          <div *ngIf="tno.errors?.required">
-            Enter your Trader Licence number
+       <br>   <div *ngIf="tno.errors?.required">
+            Enter your TLN
           </div>
 
-          <div *ngIf="tno.errors?.length">
+        <br>  <div *ngIf="tno.errors?.length">
             Aadhar Number must be min 2 characters
           </div>
         </div>
@@ -191,9 +192,9 @@
           #bal="ngModel"
         />
         <div *ngIf="bal.invalid && (bal.dirty || bal.touched)" class="alert">
-          <div *ngIf="bal.errors?.required">Enter your Balance</div>
+        <br>  <div *ngIf="bal.errors?.required">Enter your Balance</div>
 
-          <div *ngIf="bal.errors?.length">Balance must be above Rs. 1000</div>
+        <br>  <div *ngIf="bal.errors?.length">Balance must be above Rs. 1000</div>
         </div>
         <br /><br />
         <button class="btn" type="submit">Register</button>

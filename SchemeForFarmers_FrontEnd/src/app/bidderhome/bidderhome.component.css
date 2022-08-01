@@ -27,6 +27,9 @@
   a  :visited{
     color: #3c40c6;
   }
+  a:hover{
+    text-decoration: none;
+  }
   ul li
   {
     list-style: none;
@@ -58,7 +61,7 @@
     /* align-items: ; */
   }
   .sideNav li:hover{
-    background: wheat;
+    background: rgb(250, 250, 250);
     color: #05c46b;
     border-radius: 10px;
   }
