@@ -7,14 +7,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Float four columns side by side */
+
 .column {
   float: left;
   width: 25%;
   padding: 0 10px;
 }
 
-/* Remove extra left and right margins, due to padding in columns */
 .row {
   margin: 0 -5px;
 }
@@ -87,56 +86,12 @@ th {
 
   text-align: center;
   text-decoration: none;
-  /* -webkit-animation: glowing 1500ms infinite;
-  -moz-animation: glowing 1500ms infinite;
-  -o-animation: glowing 1500ms infinite;
-  animation: glowing 1500ms infinite; */
-}
-/* @-webkit-keyframes glowing {
-  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
 }
 
-@-moz-keyframes glowing {
-  0% {
-    background-color: #83898a;
-    -moz-box-shadow: 0 0 3px #767f7f;
-  }
-  50% {
-    background-color: #7a7e7e;
-    -moz-box-shadow: 0 0 40px #909293;
-  }
-  100% {
-    background-color: #959696;
-    -moz-box-shadow: 0 0 3px #888a8a;
-  }
-}
-
-@-o-keyframes glowing {
-  0% {
-    background-color: #8b8b8b;
-    box-shadow: 0 0 3px #6c7e7d;
-  }
-  50% {
-    background-color: #ff0000;
-    box-shadow: 0 0 40px #ff0000;
-  }
-  100% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
-}
-
-@keyframes glowing {
-  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-} */
 
 .login-box {
   background-repeat: repeat-y;
-  background-color: rgb(214, 240, 181);
+  background-color: rgb(189, 250, 199);
   width: 500px;
   background-size: cover;
   margin-left: 300px;
@@ -149,4 +104,31 @@ th {
 .alert-danger {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: red;
+}
+input{
+float: right;
+  clear: none;
+  margin-right: 10%;
+}
+.btn {
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 15px;
+  margin: 3pc;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
+  margin-left: 15%;
+}
+
+.btn:hover {
+  background-color: #4caf50;
+  color: white;
 }
