@@ -10,10 +10,7 @@ body {
   height: 47em;
 }
 .login-box {
-  /* background-image:url("src/assets/adminbackground.jpg") ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
+ 
   padding: 2%;
   background-color: rgb(189, 250, 199);
   width: 400px;
