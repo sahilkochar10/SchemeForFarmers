@@ -45,14 +45,14 @@ body {
 
 th {
   text-align: left;
-    font-size: 19px;
-    color: rgb(255, 255, 255);
-    background-color: #55608f;
-    border: 2px solid black;
+  font-size: 19px;
+  color: rgb(255, 255, 255);
+  background-color: #55608f;
+  border: 2px solid black;
 }
 td {
   background-color: rgba(28, 121, 56, 0.2);
-    border: 2px solid black;
+  border: 2px solid black;
 }
 table {
   margin-left: 100px;
@@ -113,38 +113,8 @@ th {
   }
 }
 tbody tr :hover {
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
-
-/* @-o-keyframes glowing {
-  0% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
-  50% {
-    background-color: #ff0000;
-    box-shadow: 0 0 40px #ff0000;
-  }
-  100% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
-}
-
-@keyframes glowing {
-  0% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
-  50% {
-    background-color: #ff0000;
-    box-shadow: 0 0 40px #ff0000;
-  }
-  100% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  } */
-/* } */
 
 .login-box {
   background-repeat: repeat-y;
@@ -161,4 +131,44 @@ tbody tr :hover {
 .alert-danger {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: red;
+}
+.btn {
+  border: none;
+  color: white;
+  padding: 18px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2pxsolid#4CAF50;
+  border-radius: 10px;
+}
+.btn:hover {
+  background-color: #4caf50;
+  color: white;
+}
+lable {
+  font-weight: bold;
+  float: left;
+  clear: both;
+  margin-left: 5%;
+  margin: 0pc;
+}
+
+input {
+  float: right;
+  clear: none;
+  margin-right: 20px;
+}
+.ctype {
+  float: right;
+  clear: none;
+  margin-right: 20px;
+  padding: 4px;
+  width: 11pc;
 }
