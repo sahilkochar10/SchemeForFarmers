@@ -4,7 +4,7 @@ export class Farmer{
 	farmerLastName:String ;
 	email:String ;
 	password:String ;
-	contactNo:String ;
+	contactNo:String;
 	balance:number;
 	aadharNo:number;
 	landDetails:String;

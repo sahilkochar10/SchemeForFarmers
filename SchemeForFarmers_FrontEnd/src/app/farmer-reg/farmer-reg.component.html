@@ -241,9 +241,9 @@
       >
         <img id="farmer_reg"
           src="assets/farmer.jpg"
-          width="120"
-          height="120"
-          style="display: block; margin-left: auto; margin-right: auto"
+          width="135"
+          height="135"
+          style="display: block; margin-left: auto; margin-right: auto;"
         />
         <h1
           style="
@@ -355,34 +355,36 @@
         <br /><br />
         <label for="t6">Contact Number: </label>
         <input
-          type="number"
+          type="tel"
           name="t6"
           [(ngModel)]="farmer.contactNo"
           required
           minlength="10"
+          maxlength="10"
           #cno="ngModel"
         />
        <div *ngIf="cno.invalid && (cno.dirty || cno.touched)" class="alert">
           <div *ngIf="cno.errors?.required"><br> Enter your number</div>
 
-         <div *ngIf="cno.errors?.minlength"><br> 
+         <div *ngIf="cno.errors?.minlength || cno.errors?.maxlength"><br> 
             Number must be atleast 10 characters
           </div>
         </div>
         <br /><br />
         <label for="t7">Aadhar Number: </label>
         <input
-          type="number"
+          type="tel"
           name="t7"
           [(ngModel)]="farmer.aadharNo"
           required
-          length="12"
+          minlength="12"
+          maxlength="12"
           #ano="ngModel"
         />
         <div *ngIf="ano.invalid && (ano.dirty || ano.touched)" class="alert">
          <div *ngIf="ano.errors?.required"> <br>Enter your Aadhar number</div>
 
-         <div *ngIf="ano.errors?.length">
+         <div *ngIf="cno.errors?.minlength || cno.errors?.maxlength">
           <br>  Aadhar Number must be 12 characters
           </div>
         </div>
@@ -417,7 +419,8 @@
          <div *ngIf="bal.errors?.length"><br> Balance must be above Rs. 1000</div>
         </div>
         <br /><br />
-        <button class="btn" type="submit">Register</button>
+        <button class="btn" type="submit">Register</button><br /><br />
+        <a routerLink="/FarmerLogin">Already Registered? Login Here!!</a>
       </div>
     </form>
   </div>
