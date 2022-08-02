@@ -30,7 +30,6 @@ register()
       this.router.navigate(['/farmerlogin'])
     }
     else {
-      //missing code right now
       alert(data.status);
     }
     });

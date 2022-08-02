@@ -18,21 +18,6 @@ export class FarmerloginComponent {
   Submitdata() {
     //alert(JSON.stringify(this.login));
     this.farmerloginService.login(this.login).subscribe(data => {
-      //alert(JSON.stringify(data));
-      // if(data.status == 'SUCCESS') {
-      //   let farmerId = data.farmerId;
-      //   console.log()
-      //   let farmerFirstName = data.farmerFirstName;
-      //   //let obj = {id : customerId, name : customerName};
-      //   sessionStorage.setItem('farmerId', String(farmerId));
-        
-      //   //sessionStorage.getItem('customerId');
-      //   sessionStorage.setItem('farmerFirstName', farmerFirstName);
-      //   this.router.navigate(['farmerHome']);
-      // }
-      // else {
-      //   this.message = data.message;
-      // }
       if(data != null)
       {
         let farmerId = data.farmerId;
