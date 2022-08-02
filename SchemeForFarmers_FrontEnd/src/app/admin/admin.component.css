@@ -4,8 +4,7 @@
   font-family: 'Times New Roman', Times, serif;
 }
 body{
-  /*background-image: url("src\assets\farmerhome.jpg");*/
-  /* background-image:url("src/assets/loginbg.jpg") ; */
+
   background-repeat: no-repeat;
   background-size:cover;
   height: 50em;
@@ -45,18 +44,12 @@ h4{
   flex-direction: column;
   box-shadow:5px  darkgreen ;
 }
-/* .sideNav .logo
-{
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+
 .sideNav li{
   padding: 20px;
   color: #7f8c8d;
   display: flex;
-  /* align-items: ; */
+  
 }
 .sideNav li:hover{
   background: white;
