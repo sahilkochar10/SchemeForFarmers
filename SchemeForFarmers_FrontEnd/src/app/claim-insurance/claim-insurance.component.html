@@ -55,10 +55,10 @@
 <div *ngIf="div1" >
 <form (ngSubmit)="Submitdata()">
     <div class="login-box" style=" border-radius: 5%; box-shadow: black;">
-        <img src="assets/farmer.jpg" width="225" height="135" style="display: block; margin-left: auto; margin-right: auto;">
-        <h1 style="margin-left: 10px;">Insurance Application</h1>
+       
+        <h1 style="text-align: center;">Claim Application</h1><br>
 
-      <label for="t1"> Insuree Id:</label>
+      <label for="t1"> Insuree Id: </label>
       <input
         type="number"
         name="t1"
@@ -66,7 +66,7 @@
         required
         minlength="3"
         #id="ngModel"
-      /><br /><br />
+      />
       <div *ngIf="id.invalid && (id.dirty || id.touched)" class="alert">
         <div *ngIf="id.errors?.required">Insuree Name is Required!</div>
 
@@ -74,8 +74,8 @@
           Insuree Name must be atleast 3 characters long
         </div>
       </div>
-
-      <label for="t2"> Farmer Id </label>
+      <br/><br/>
+      <label for="t2"> Farmer Id: </label>
       <input
         type="number"
         name="t2"
@@ -83,12 +83,12 @@
         required
         minlength="3"
         #fid="ngModel"
-      /><br /><br />
+      />
       <div *ngIf="fid.invalid && (fid.dirty || fid.touched)" class="alert">
         <div *ngIf="fid.errors?.required">Farmer ID is Required!</div>
       </div>
-
-      <label for="t3"> Insuree Name:</label>
+      <br/><br/>
+      <label for="t3"> Insuree Name: </label>
       <input
         type="text"
         name="t3"
@@ -96,35 +96,37 @@
         required
         minlength="3"
         #iname="ngModel"
-      /><br /><br />
+      />
       <div
         *ngIf="iname.invalid && (iname.dirty || iname.touched)"
         class="alert"
       >
         <div *ngIf="iname.errors?.required">Insuree Name is Required!</div>
       </div>
-
-      <label for="t4"> Cause of Loss:</label>
+      <br /><br />
+      <label for="t4"> Cause of Loss: </label>
       <input
         type="text"
         name="t4"
         [(ngModel)]="insurance.causeofloss"
         required
         #loss="ngModel"
-      /><br /><br />
+      />
       <div *ngIf="loss.invalid && (loss.dirty || loss.touched)" class="alert">
         <div *ngIf="loss.errors?.required">
           Enter Cause of Loss is Required!
         </div>
       </div>
-      <label for="t5"> Date of Loss</label>
+      <br/><br/>
+      <label for="t5">Date of Loss: </label>
       <input
         type="date"
         name="t5"
         [(ngModel)]="insurance.dateofloss"
         required
         #dloss="ngModel"
-      /><br /><br />
+        style="width: 180px;"
+      />
       <div
         *ngIf="dloss.invalid && (dloss.dirty || dloss.touched)"
         class="alert"
@@ -133,18 +135,21 @@
           Enter Cause of Loss is Required!
         </div>
       </div>
-      <label for="t6"> Amount:</label>
+      <br/><br/>
+      <label for="t6">Amount: </label>
       <input
         type="number"
         name="t6"
         [(ngModel)]="insurance.amount"
         required
         #am="ngModel"
-      /><br /><br />
+      />
       <div *ngIf="am.invalid && (am.dirty || am.touched)" class="alert">
         <div *ngIf="am.errors?.required">Enter Cause of Loss is Required!</div>
       </div>
-      <button type="submit">Submit</button>
-    </div>
+      <br /><br />
+      <div style="text-align: center;">
+      <button  class="btn" type="submit">Submit</button>
+    </div></div>
   </form>
 </div>

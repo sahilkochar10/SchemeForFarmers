@@ -1,5 +1,5 @@
 body {
-  /*background-image: url("src\assets\farmerhome.jpg");*/
+  
   background-image: url("src/assets/loginbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,10 +10,7 @@ body {
   height: 45em;
 }
 .login-box {
-  /* background-image:url("src/assets/adminbackground.jpg") ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
+ 
   background-color: rgb(210, 227, 223);
   width: 400px;
   height: 550px;
