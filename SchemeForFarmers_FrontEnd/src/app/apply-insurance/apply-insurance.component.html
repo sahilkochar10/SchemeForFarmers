@@ -1,11 +1,11 @@
 <form (ngSubmit)="Submitdata()">
   <div class="login-box" style="border-radius: 5%; box-shadow: black">
-    <img
+    <!-- <img
       src="assets/farmer.jpg"
       width="225"
       height="135"
       style="display: block; margin-left: auto; margin-right: auto"
-    />
+    /> -->
     <h1
       style="
         text-align: center;
@@ -13,7 +13,7 @@
       "
     >
       Insurance Application
-    </h1>
+    </h1><br>
 
     <label for="t1">Insuree Name: </label>
     <input
@@ -64,6 +64,7 @@
       [(ngModel)]="insurance.croptype"
       name="insurance"
       id="insuranceapproval"
+      
     >
       <option value="Kharif">KHARIF</option>
       <option value="Rabi">RABI</option>
@@ -85,7 +86,7 @@
     <br /><br />
     <div class="form-group form-check">
       <button (click)="calculation()" class="btn" style="margin-top: 20px">
-        Submit/Estimated amount</button
+        Submit</button
       ><br /><br />
 
       <!-- <button type="submit" class="btn btn-light btn-lg"
