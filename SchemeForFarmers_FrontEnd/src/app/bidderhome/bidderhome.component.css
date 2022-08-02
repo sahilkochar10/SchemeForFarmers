@@ -5,7 +5,7 @@
   }
   body{
     /*background-image: url("src\assets\farmerhome.jpg");*/
-    background-image:url("src/assets/loginbg.jpg") ;
+    /* background-image:url("src/assets/loginbg.jpg") ; */
     background-repeat: no-repeat;
     background-size:cover;
     height: 60em;
@@ -15,8 +15,8 @@
   {
     min-width: fit-content;
     min-height: 10vh;
-    color: white;
-    background: #095e36;
+    color: black;
+    background: #ace973;
     right:0;
     width: 100vw;
   }
@@ -32,6 +32,7 @@
   }
   ul li
   {
+   
     list-style: none;
   }
   h4{
@@ -46,6 +47,7 @@
     min-height: fit-content;
     display: flex;
     flex-direction: column;
+    top:100px;
   }
   /* .sideNav .logo
   {

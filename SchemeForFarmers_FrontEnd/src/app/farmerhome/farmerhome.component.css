@@ -6,17 +6,17 @@
 
 body {
   /*background-image: url("src\assets\farmerhome.jpg");*/
-  background-image: url("src/assets/loginbg.jpg");
+  /* background-image: url("src/assets/loginbg.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60em;
+  height: 50em;
   font-family: "Gill Sans Extrabold", sans-serif;
 }
 .header {
   min-width: fit-content;
   min-height: 10vh;
-  color: white;
-  background: #095e36;
+  color: black;
+  background: #ace973;
   right: 0;
   width: 100vw;
 }
@@ -37,10 +37,12 @@ h4 {
   position: absolute;
   background: #ace973;
   width: 20vw;
-  height: max-content;
+  height: max-content; 
   min-height: fit-content;
   display: flex;
   flex-direction: column;
+  left: 0;
+  top: 90px;
 }
 /* .sideNav .logo
   {
@@ -51,7 +53,7 @@ h4 {
   } */
 .sideNav li {
   padding: 30px;
-  color: #7f8c8d;
+  color: #ace973;
   display: flex;
   /* align-items: ; */
 }

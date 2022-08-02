@@ -74,8 +74,8 @@ input {
   margin-right: 17%;
 }
 #farmer_reg img {
-  border: 100px;
-  border-radius: 15pc;
+  border: 1px;
+  border-radius: 8pc;
   padding: 5px;
   width: 150px;
 }

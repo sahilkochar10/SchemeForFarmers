@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Farmer } from '../farmer';
 import { FarmerService } from "../farmer.service";
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-farmer-reg',
@@ -11,24 +12,27 @@ import { FarmerService } from "../farmer.service";
 })
 
 @Injectable()
-export class FarmerRegComponent implements OnInit {
+export class FarmerRegComponent  {
 farmer=new Farmer();
-constructor(private farmerService:FarmerService,private router:Router) { }
-ngOnInit(): void {
+
+constructor(private farmerService:FarmerService,private router:Router) {}
+ngOnInit(){
 }
 
 register()
 {
   //alert(JSON.stringify(this.customer));
-  this.farmerService.register(this.farmer).subscribe(data => {
-    //alert(JSON.stringify(data));
+  this.farmerService.register(this.farmer).subscribe(
+    data => {
+
     if(data.status == 'SUCCESS') {
-      this.router.navigate(['FarmerLogin'])
+      alert("You've been registerd");
+      this.router.navigate(['/farmerlogin'])
     }
     else {
       //missing code right now
       alert(data.status);
     }
-  })
+    });
 }
 }

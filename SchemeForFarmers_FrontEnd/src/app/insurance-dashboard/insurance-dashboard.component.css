@@ -5,7 +5,7 @@
 }
 body {
   /*background-image: url("src\assets\farmerhome.jpg");*/
-  background-image: url("src/assets/loginbg.jpg");
+  /* background-image: url("src/assets/loginbg.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   height: 50em;
@@ -15,7 +15,7 @@ body {
   min-width: fit-content;
   min-height: 10vh;
   color: white;
-  background: #095e36;
+  background: #328e63;
   right: 0;
   width: 100vw;
 }
@@ -36,7 +36,7 @@ h4 {
   position: absolute;
   margin-top: 240px;
   margin-left: 30px;
-  background: #c0dfa1;
+  background:#4bb43f;
   width: 20vw;
   height: max-content;
   min-height: fit-content;

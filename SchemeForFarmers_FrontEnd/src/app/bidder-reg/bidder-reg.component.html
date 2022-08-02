@@ -58,7 +58,7 @@
           name="t2"
           [(ngModel)]="bidder.bidderLastName"
           required
-          minlength="1"
+          minlength="3"
           #lname="ngModel"
         />
         <div
@@ -68,7 +68,7 @@
           <div *ngIf="lname.errors?.required"><br>Last Name is Required</div>
 
           <div *ngIf="lname.errors?.minlength"><br>
-            Last Name must be atleast 1 character long
+            Last Name must be atleast 3 character long
           </div>
         </div>
         <br /><br />
@@ -131,41 +131,43 @@
         <br /><br />
         <label for="t6">Contact Number: </label>
         <input
-          type="number"
+          type="tel"
           name="t6"
           [(ngModel)]="bidder.contactNo"
           required
           minlength="10"
+          maxlength="10"
           #cno="ngModel"
         />
         <div *ngIf="cno.invalid && (cno.dirty || cno.touched)" class="alert">
           <div *ngIf="cno.errors?.required"><br>Enter your number</div>
 
-         <div *ngIf="cno.errors?.minlength"> <br>
+         <div *ngIf="cno.errors?.minlength || cno.errors?.maxlength"> <br>
             Number must be atleast 10 characters
           </div>
         </div>
         <br /><br />
         <label for="t7">Aadhar Number: </label>
         <input
-          type="number"
+          type="tel"
           name="t7"
           [(ngModel)]="bidder.aadharNo"
           required
-          length="12"
+          minlength="12"
+          maxlength="12"
           #ano="ngModel"
         />
         <div *ngIf="ano.invalid && (ano.dirty || ano.touched)" class="alert">
           <div *ngIf="ano.errors?.required"><br>Enter your Aadhar number</div>
 
-          <div *ngIf="ano.errors?.length">
+          <div *ngIf="ano.errors?.minlength || ano.errors?.maxlength">
             <br> Aadhar Number must be 12 characters
           </div>
         </div>
         <br /><br />
         <label for="t8">Trader Licence Number: </label>
         <input
-          type="number"
+          type="tel"
           name="t8"
           [(ngModel)]="bidder.traderLicenseNo"
           required
@@ -177,8 +179,8 @@
           <br>  Enter your TLN
           </div>
 
-          <div *ngIf="tno.errors?.length">
-            <br> Aadhar Number must be min 2 characters
+          <div *ngIf="tno.errors?.minlength">
+            <br> Trader Licence Number must be min 2 characters
           </div>
         </div>
         <br /><br />
@@ -197,7 +199,8 @@
           <div *ngIf="bal.errors?.length"><br>Balance must be above Rs. 1000</div>
         </div>
         <br /><br />
-        <button class="btn" type="submit">Register</button>
+        <button class="btn" type="submit">Register</button><br><br>
+        <a routerLink="/BidderLogin">Already Registered? Login Here!!</a>
       </div>
     </form>
   </div>
