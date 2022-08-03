@@ -31,28 +31,7 @@ export class BidPlacingComponent implements OnInit {
   {
     this.div1=true;
   }
-  // update()
-  // {
-  //   this.bidderService.updateCrop(this.crop)
-  // }
-  // placeBid()
-  // {
-  //   this.id = Number(sessionStorage.getItem("bidderId"));
-  //   this.crop.bidderId = this.id;
-  //   console.log(this.crop.bidderId);
-  //   this.bidderService.updateCrop(this.crop).subscribe(data=>
-  //     {
-  //       console.log(this.crop.cropId);
-  //       if(data.status == 'SUCCESS')
-  //       {
-  //         this.router.navigate(['bidderHome']);
-  //       }
-  //       else
-  //       {
-  //         alert(data.status);
-  //       }
-  //     })
-  // }
+  
   placeBid()
   {
     this.id = Number(sessionStorage.getItem("bidderId"));

@@ -17,12 +17,12 @@ export class BidhistoryComponent implements OnInit {
     this.adminService.history().subscribe(data =>
       {
             this.crop = data;
-            // console.log(this.crop);
+            
             this.crops = this.crop.filter(
               x=> x.bidder.bidderId == this.b_id
             );
             console.log(this.b_id);
-            // console.log(this.crops);
+            
       })
   }
 

@@ -11,17 +11,12 @@ import { FarmerService } from '../farmer.service';
 export class FarmerDetailsComponent implements OnInit {
 
   constructor(private farmerService:FarmerService) { }
-  // farmers:Observable<Farmer[]>;
+  
   farmers:Farmer[];
   
   ngOnInit()
   {
-  //   this.farmers=
-  // [
-  //   {
-  //     farmerId:1001,farmerFirstName:'John',farmerLastName:'S',email:"john@gmail.com",password:"john123",contactNo:"9123456789",balance:10000,aadharNo:123,landArea:"chennai"
-  //   }
-  // ];
+  
     this.farmerService.getFarmerList().subscribe(data=>
       {
         

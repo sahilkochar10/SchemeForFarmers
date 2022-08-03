@@ -36,7 +36,6 @@ export class BidderRegComponent implements OnInit {
   }
 
   register() {
-    //alert(JSON.stringify(this.customer));
     this.bidderService.register(this.bidder).subscribe(data => {
       alert(JSON.stringify(data));
       
@@ -44,7 +43,6 @@ export class BidderRegComponent implements OnInit {
         this.router.navigate(['BidderLogin'])
       }
       else {
-        //missing code right now
         alert(data.status);
       }
     })

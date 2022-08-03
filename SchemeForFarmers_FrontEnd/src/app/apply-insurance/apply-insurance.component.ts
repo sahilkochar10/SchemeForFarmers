@@ -37,25 +37,11 @@ export class ApplyInsuranceComponent implements OnInit {
   }
   Submitdata()
   {
-    // this.id = Number(sessionStorage.getItem("farmerId"));
-    // this.insurance.insuranceId = this.id;
-    // this.farmerService.applyInsurance(this.insurance).subscribe(data=>
-    //   {
-        
-    //     console.log(this.insurance.insuranceId);
-    //     if(data.status == 'SUCCESS'){
-    //       console.log(this.insurance.insuranceId);
-    //       //this.router.navigate(['farmerHome'])
-    //     }
-    //     else
-    //     {
-    //       alert(data.status);
-    //     }
-    //   })
+
+
     this.id = Number(sessionStorage.getItem("farmerId"));
     this.insurance.farmerId = this.id;
     this.insurance.estimatedamount = this.amount;
-    //this.insurance.estimatedamount =
     this.farmerService.applyInsurance(this.insurance).subscribe(data=>
       {
         console.log(this.insurance);

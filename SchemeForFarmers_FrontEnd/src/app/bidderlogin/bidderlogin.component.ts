@@ -20,20 +20,13 @@ export class BidderloginComponent implements OnInit {
  
   Submitdata()
   {
-    //console.log("Hi")
-    //alert(JSON.stringify(this.login));
+    
     this.loginService.login(this.login).subscribe(data => {
-      //alert(JSON.stringify(data));
+      
       if(data != null) {
         let bidderId = data.bidderId;
         sessionStorage.setItem('bidderId',String(bidderId));
-        // let bidderFirstName = data.bidderFirstName;
-        // //let obj = {id : customerId, name : customerName};
-        // sessionStorage.setItem('bidderId', String(bidderId));
-        // console.log(bidderId);
-        // //sessionStorage.getItem('customerId');
-        // sessionStorage.setItem('bidderFirstName', bidderFirstName);
-        // this.router.navigate(['bidderHome']);
+        
         this.router.navigate(['bidderHome']);
 
       }
